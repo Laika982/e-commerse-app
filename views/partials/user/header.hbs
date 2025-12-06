@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Armor — Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Minimal reset for consistent font rendering (still Tailwind-only for layout) */
+    :root { --brand-blue: #1f6b8a; --brand-orange: #f07f2e; --muted: #f6f6f6; }
+    html,body { height:100%; }
+        /* small helper to limit popup shadow spread on older browsers */
+    .popup-shadow { box-shadow: 0 10px 30px rgba(2,6,23,0.12); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- TOP PROMO BAR -->
+  <div class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
+      <div class="flex items-center gap-3">
+        <span class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-sm text-xs font-semibold">Black</span>
+        <span>Friday</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4">
+        <span>Up to <span class="text-yellow-300 font-bold">59%</span> OFF</span>
+        <button class="bg-yellow-400 text-black px-4 py-1 text-sm rounded shadow">SHOP NOW ➜</button>
+      </div>
+      <button aria-hidden="true" class="sm:hidden text-sm">Close ✕</button>
+    </div>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="bg-[color:var(--brand-blue)] text-white">
+    <div class="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
+      <!-- Left: Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <!-- REPLACE: Logo SVG / img -->
+        <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/></svg>
+        </div>
+        <span class="font-extrabold text-xl tracking-wide">ARMOR</span>
+      </a>
+
+      <!-- Middle: Search (hidden on xs) -->
+      <div class="hidden md:flex flex-1 justify-center px-6">
+        <div class="w-full max-w-2xl">
+          <label for="search" class="sr-only">Search</label>
+          <div class="relative">
+            <input id="search" type="search" placeholder="Search for anything..." class="w-full rounded-md px-4 py-3 text-gray-800 focus:outline-none" />
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 p-2">
+              <svg class="h-5 w-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="6" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: actions -->
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex items-center text-sm gap-3">
+          <button class="flex items-center gap-2 px-3 py-2 bg-white/10 rounded">Follow us</button>
+        </div>
+
+        <!-- Cart / Wishlist / User -->
+        <!-- <div class="flex items-center gap-3">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false" class="relative p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke-width="2"/></svg>
+            <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-1 rounded-full">2</span>
+          </button>
+          <button id="wishlistBtn" class="p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.8 6.6a5.5 5.5 0 00-7.78 0L12 7.6l-1.02-1a5.5 5.5 0 00-7.78 7.78L12 22l8.8-7.62a5.5 5.5 0 000-7.78z" stroke-width="1.2"/></svg>
+          </button>
+          <button id="userBtn" aria-haspopup="true" aria-expanded="false" class="p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22c0-4 4-7 10-7s10 3 10 7" stroke-width="1.5"/></svg>
+          </button>
+        </div> -->
+         <div class="flex items-center gap-3">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false" class="relative p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke-width="2"/></svg>
+            <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-1 rounded-full">2</span>
+          </button>
+          <button id="wishlistBtn" class="p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.8 6.6a5.5 5.5 0 00-7.78 0L12 7.6l-1.02-1a5.5 5.5 0 00-7.78 7.78L12 22l8.8-7.62a5.5 5.5 0 000-7.78z" stroke-width="1.2"/></svg>
+          </button>
+          <button id="userBtn" aria-haspopup="true" aria-expanded="false" class="p-2 bg-white/10 rounded">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22c0-4 4-7 10-7s10 3 10 7" stroke-width="1.5"/></svg>
+          </button>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 ml-1 bg-white/10 rounded">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- SECONDARY NAV: categories + small actions -->
+    <nav class="bg-white text-gray-700 border-t border-white/10">
+      <div class="container mx-auto px-4 py-3 flex items-center gap-4">
+        <button id="categoryBtn" class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded shadow-sm">
+          All Category
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="M6 8l4 4 4-4" stroke-width="2"/></svg>
+        </button>
+
+        <div class="hidden sm:flex items-center gap-6 text-sm">
+          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14" stroke-width="2"/></svg> Track Order</a>
+          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v10" stroke-width="2"/></svg> Customer Support</a>
+          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="2"/></svg> Need Help</a>
+        </div>
+      </div>
+    </nav>
+  </header>

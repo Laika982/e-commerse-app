@@ -1,0 +1,282 @@
+{{> user/header }}
+
+  <!-- MEGA MENU (hidden by default) -->
+  <div id="megaMenu" class="hidden absolute left-0 right-0 z-40 mt-2">
+    <div class="container mx-auto px-4">
+      <div class="bg-white rounded shadow-lg grid grid-cols-1 lg:grid-cols-3 p-4 gap-4">
+        <ul class="space-y-2 border-r pr-4">
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Bomber Jackets</li>
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Casual Jackets</li>
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Denim Jackets</li>
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Leather Jackets</li>
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Puffer Jackets</li>
+          <li class="px-3 py-2 hover:bg-gray-50 rounded">Racer Jackets</li>
+        </ul>
+
+        <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-semibold mb-3">Featured Jackets</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 p-3 border rounded">
+                <div class="w-14 h-14 bg-gray-100 rounded overflow-hidden"><!-- Thumb --></div>
+                <div>
+                  <div class="text-sm font-medium">Denim Jacket: Arctic</div>
+                  <div class="text-xs text-blue-600">$160</div>
+                </div>
+              </li>
+              <li class="flex items-center gap-3 p-3 border rounded">
+                <div class="w-14 h-14 bg-gray-100 rounded overflow-hidden"><!-- Thumb --></div>
+                <div>
+                  <div class="text-sm font-medium">Superman: Denim Jackets</div>
+                  <div class="text-xs text-blue-600">$1,500</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-yellow-50 p-4 rounded flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold">21% Discount</h3>
+              <p class="mt-2 text-sm text-gray-700">Escape the world, to a world of comfort and peace</p>
+            </div>
+            <div class="mt-4">
+              <div class="inline-block bg-white px-3 py-1 rounded text-sm font-semibold">$99 USD</div>
+              <div class="mt-4">
+                <a href="#" class="inline-block bg-orange-500 text-white px-4 py-2 rounded shadow">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- HERO -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+      <!-- Left: text -->
+      <div class="lg:col-span-2 bg-gray-100 p-8 rounded-md">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+          Men Black Full <br/> Sleeve<br/> Lightweight <br/> Shacket
+        </h1>
+        <p class="mt-6 max-w-prose text-gray-600">A clean, lightweight shacket made for city life.</p>
+        <div class="mt-6">
+          <a href="#" class="inline-flex items-center gap-3 bg-orange-500 text-white px-5 py-3 rounded-md shadow-sm">
+            SHOP NOW →
+          </a>
+        </div>
+
+        <!-- hero dots (small) -->
+        <div class="mt-6 flex gap-2 items-center">
+          <span class="w-2 h-2 bg-gray-800 rounded-full"></span>
+          <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+          <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+        </div>
+      </div>
+
+      <!-- Right: image + side promos -->
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-md">
+          <!-- ⭐⭐ ADD YOUR HERO IMAGE HERE ⭐⭐ -->
+          <img 
+            src="../disgn-img/user/1725371408_5666055.png" 
+            alt="Black Shacket"
+            class="mt-2 w-full h-44 max-w-md rounded-lg object-cover"
+          />
+          <!-- ⭐⭐ END HERO IMAGE ⭐⭐ -->
+          <!-- small price badge -->
+          <div class="absolute translate-y-[-2.8rem] translate-x-[-1rem]">
+            <div class="bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-semibold">$299</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3">
+          <div class="bg-black text-white p-4 rounded-md flex items-center justify-between">
+            <div>
+              <div class="text-xs text-yellow-300">SUMMER SALES</div>
+              <div class="font-semibold">New Bomber Jackets...</div>
+            </div>
+            <a href="#" class="bg-orange-500 px-3 py-2 rounded-md">SHOP NOW</a>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-md text-center">
+            <!-- ⭐ IMAGE: sunglasses promo ⭐ -->
+            <img src="/images/promo/sunglasses.png" alt="Coming Soon" class="mx-auto w-24 h-16 object-contain" />
+            <div class="mt-3 font-semibold">Coming Soon...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES row -->
+    <section class="mt-8">
+      <div class="bg-white border rounded-md p-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+          <div class="flex items-start gap-3">
+            <!-- ⭐ ICON placeholder: delivery ⭐ -->
+            📦
+            <div>
+              <div class="font-semibold">FASTED DELIVERY</div>
+              <div class="text-gray-500 text-xs">Delivery in 24/H</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            🏆
+            <div>
+              <div class="font-semibold">24 HOURS RETURN</div>
+              <div class="text-gray-500 text-xs">100% money-back guarantee</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            🔒
+            <div>
+              <div class="font-semibold">SECURE PAYMENT</div>
+              <div class="text-gray-500 text-xs">Your money is safe</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            🎧
+            <div>
+              <div class="font-semibold">SUPPORT 24/7</div>
+              <div class="text-gray-500 text-xs">Live contact/message</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES row -->
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold mb-4 text-center">Shop with Categories</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        <!-- repeat category cards -->
+        <article class="bg-white border rounded-md p-3 text-center">
+          <!-- ⭐ IMAGE: cat bomber ⭐ -->
+          <img src="../disgn-img/user/1725371408_5666055.png" alt="Bomber jackets" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Bomber jackets</div>
+        </article>
+
+        <article class="bg-white border rounded-md p-3 text-center">
+          <img src="/images/categories/denim.jpg" alt="Denim" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Denim jackets</div>
+        </article>
+
+        <article class="bg-white border rounded-md p-3 text-center">
+          <img src="/images/categories/racer.jpg" alt="Racer" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Racer jackets</div>
+        </article>
+
+        <article class="bg-white border rounded-md p-3 text-center">
+          <img src="/images/categories/varsity.jpg" alt="Varsity" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Varsity jackets</div>
+        </article>
+
+        <article class="bg-white border rounded-md p-3 text-center">
+          <img src="/images/categories/leather.jpg" alt="Leather" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Leather jackets</div>
+        </article>
+
+        <article class="bg-white border rounded-md p-3 text-center">
+          <img src="/images/categories/puffer.jpg" alt="Puffer" class="w-full h-28 object-cover rounded" />
+          <div class="mt-2 text-sm">Puffer jackets</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BEST DEALS grid -->
+    <section class="mt-12">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-semibold">Best Deals</h3>
+        <a href="#" class="text-blue-500 text-sm">Browse All Product →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <!-- PRIMARY BIG DEAL -->
+        <article class="bg-white border rounded-md p-4">
+          <!-- ⭐ IMAGE: big product (deal) ⭐ -->
+          <img src="/images/products/deal-big.jpg" alt="Raceer Jacket" class="w-full h-64 object-cover rounded" />
+          <div class="mt-3">
+            <div class="text-sm text-yellow-500 font-semibold">32% OFF</div>
+            <h4 class="font-semibold mt-2">Raceer Jackets 2025 edition</h4>
+            <div class="mt-2 text-gray-500 line-through text-sm">$665.99</div>
+            <div class="mt-1 text-blue-600 font-bold">$442.12</div>
+            <div class="mt-4 flex items-center gap-3">
+              <button class="bg-orange-500 text-white px-4 py-2 rounded">ADD TO CART</button>
+              <button class="border px-4 py-2 rounded">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- COLUMN of small cards -->
+        <div class="space-y-4">
+          <article class="bg-white border rounded-md p-3 flex gap-3">
+            <img src="/images/products/thumb-1.jpg" alt="Plaid Jacket" class="w-20 h-20 object-cover rounded" />
+            <div>
+              <div class="text-sm font-medium">Plaid Light Emerald</div>
+              <div class="text-blue-600">$1699</div>
+            </div>
+          </article>
+
+          <article class="bg-white border rounded-md p-3 flex gap-3">
+            <img src="/images/products/thumb-2.jpg" alt="TSS Olive" class="w-20 h-20 object-cover rounded" />
+            <div>
+              <div class="text-sm font-medium">TSS Olive Fit</div>
+              <div class="text-blue-600">$299</div>
+            </div>
+          </article>
+
+          <article class="bg-white border rounded-md p-3">
+            <img src="/images/products/thumb-coat.jpg" alt="Black Coat" class="w-full h-40 object-cover rounded" />
+          </article>
+        </div>
+
+        <!-- RIGHT column small deals -->
+        <div class="space-y-4">
+          <article class="bg-white border rounded-md p-3">
+            <img src="/images/products/thumb-3.jpg" alt="Regular fit" class="w-full h-40 object-cover rounded" />
+            <div class="mt-2">Regular fit Jackets <div class="text-blue-600">$150</div></div>
+          </article>
+
+          <article class="bg-white border rounded-md p-3">
+            <img src="/images/products/thumb-4.jpg" alt="Camera" class="w-full h-40 object-cover rounded" />
+            <div class="mt-2">Sony DSCHX9 <div class="text-blue-600">$1,200</div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO BANNER -->
+    <section class="mt-12 bg-amber-50 rounded-md p-6 lg:flex lg:items-center lg:justify-between">
+      <div>
+        <div class="text-xs text-blue-600 font-semibold">SAVE UP TO $200.00</div>
+        <h3 class="text-2xl font-bold mt-2">TSS Leather Jackets</h3>
+        <p class="mt-2 text-gray-600">WaterProof, double layered premium</p>
+        <div class="mt-4">
+          <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-md">SHOP NOW →</a>
+        </div>
+      </div>
+      <div class="mt-6 lg:mt-0">
+        <!-- ⭐ IMAGE: promo model image ⭐ -->
+        <img src="/images/promo/promo-man.jpg" alt="Promo" class="w-full max-w-xs object-cover rounded" />
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="mt-12 bg-[color:var(--brand-blue)] text-white rounded p-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-xl font-bold">Subscribe to our newsletter</h3>
+        <p class="mt-2 text-sm text-white/80">Get updates and exclusive offers. No spam.</p>
+        <form class="mt-6 flex flex-col sm:flex-row items-center gap-3 justify-center">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" type="email" placeholder="Email address" class="w-full sm:flex-1 px-4 py-3 rounded text-gray-900" />
+          <button class="px-5 py-3 bg-orange-500 rounded text-white">SUBSCRIBE ➜</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+{{> user/footer }}
+

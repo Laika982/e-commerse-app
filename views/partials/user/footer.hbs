@@ -1,0 +1,203 @@
+<!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 mt-12">
+    <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div>
+        <!-- ⭐ IMAGE: footer logo ⭐ -->
+        <img src="/images/logo/armor-logo-white.png" alt="Armor" class="w-28" />
+        <p class="text-sm mt-3">Customer Support: (629) 555-0129</p>
+        <p class="text-sm mt-1">4517 Washington Ave., Manchester, KY</p>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Top Category</h5>
+        <ul class="mt-3 text-sm space-y-1">
+          <li>Denim Jackets</li>
+          <li>Leather Jackets</li>
+          <li>Puffy Jackets</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Quick Links</h5>
+        <ul class="mt-3 text-sm space-y-1">
+          <li>Shop Product</li>
+          <li>Shopping Cart</li>
+          <li>Wishlist</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Download App</h5>
+        <div class="mt-3 flex gap-3">
+          <!-- ⭐ IMAGE: app store badges ⭐ -->
+          <img src="/images/other/google-play.png" alt="Google Play" class="h-10" />
+          <img src="/images/other/app-store.png" alt="App Store" class="h-10" />
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 py-4 text-center text-sm">
+      Kinbo - eCommerce Template © 2021. Design by Templatecookie
+    </div>
+  </footer>
+   <!-- LOGIN MODAL (hidden) -->
+  <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative popup-shadow bg-white rounded-md w-full max-w-md p-6 z-10">
+      <h3 class="text-lg font-semibold">Sign in to your account</h3>
+      <form class="mt-4 space-y-4">
+        <div>
+          <label class="block text-sm text-gray-600">Email Address</label>
+          <input type="email" class="w-full border rounded px-3 py-2 mt-1" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-600">Password</label>
+          <input type="password" class="w-full border rounded px-3 py-2 mt-1" />
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" class="bg-orange-500 text-white px-4 py-2 rounded">LOGIN →</button>
+          <button id="closeLogin" type="button" class="border px-4 py-2 rounded">CANCEL</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CART DROPDOWN (hidden) -->
+  <div id="cartPopup" class="hidden absolute right-8 top-28 w-80 z-50">
+    <div class="popup-shadow bg-white rounded-md overflow-hidden">
+      <div class="p-4 border-b">
+        <strong>Shopping Cart (02)</strong>
+      </div>
+      <div class="p-3 space-y-3">
+        <div class="flex items-center gap-3">
+          <!-- ⭐ IMAGE: cart item 1 ⭐ -->
+          <img src="/images/cart/item-1.jpg" alt="Cart item 1" class="w-16 h-16 object-cover rounded" />
+          <div class="flex-1 text-sm">
+            <div>TSS Originals: Blurred Lines</div>
+            <div class="text-blue-600">$1,500</div>
+          </div>
+          <button class="text-gray-400">✕</button>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="/images/cart/item-2.jpg" alt="Cart item 2" class="w-16 h-16 object-cover rounded" />
+          <div class="flex-1 text-sm">
+            <div>Quilted Jacket: Snow Storm</div>
+            <div class="text-blue-600">$2,679</div>
+          </div>
+          <button class="text-gray-400">✕</button>
+        </div>
+
+        <div class="pt-3 border-t">
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-600">Sub-Total:</div>
+            <div class="font-semibold">$2038.00 USD</div>
+          </div>
+
+          <div class="mt-3 flex gap-2">
+            <a href="#" class="flex-1 bg-orange-500 text-white px-3 py-2 rounded text-center">CHECKOUT NOW</a>
+            <a href="#" class="flex-1 border px-3 py-2 rounded text-center">VIEW CART</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- USER LOGIN POPUP -->
+  <div id="userPopup" class="hidden fixed right-4 top-24 z-50 w-80 bg-white rounded shadow-lg">
+    <div class="p-6">
+      <h4 class="font-semibold text-lg">Sign in to your account</h4>
+      <form class="mt-4 space-y-3">
+        <div>
+          <label for="emailPopup" class="sr-only">Email address</label>
+          <input id="emailPopup" class="w-full border px-3 py-2 rounded" placeholder="Email Address" />
+        </div>
+        <div>
+          <label for="passPopup" class="sr-only">Password</label>
+          <input id="passPopup" type="password" class="w-full border px-3 py-2 rounded" placeholder="Password" />
+        </div>
+        <div class="flex gap-2">
+          <button class="flex-1 bg-orange-500 text-white px-4 py-2 rounded">Login →</button>
+          <button type="button" class="flex-1 border px-4 py-2 rounded">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU PANEL -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-black/40">
+    <div class="absolute left-0 top-0 bottom-0 w-80 bg-white p-4 overflow-auto">
+      <div class="flex items-center justify-between">
+        <div class="text-lg font-bold">Menu</div>
+        <button id="mobileClose" class="p-2">✕</button>
+      </div>
+      <nav class="mt-4 space-y-2">
+        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Home</a>
+        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Shop</a>
+        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: basic toggles for popups -->
+  <script>
+    // toggles
+    const categoryBtn = document.getElementById('categoryBtn');
+    const megaMenu = document.getElementById('megaMenu');
+    const cartBtn = document.getElementById('cartBtn');
+    const cartPopup = document.getElementById('cartPopup');
+    const userBtn = document.getElementById('userBtn');
+    const userPopup = document.getElementById('userPopup');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    function closeAll() {
+      megaMenu.classList.add('hidden');
+      cartPopup.classList.add('hidden');
+      userPopup.classList.add('hidden');
+      mobileMenu.classList.add('hidden');
+    }
+
+    categoryBtn?.addEventListener('click', (e) => {
+      megaMenu.classList.toggle('hidden');
+      cartPopup.classList.add('hidden');
+      userPopup.classList.add('hidden');
+    });
+
+    cartBtn?.addEventListener('click', (e) => {
+      cartPopup.classList.toggle('hidden');
+      megaMenu.classList.add('hidden');
+      userPopup.classList.add('hidden');
+    });
+
+    userBtn?.addEventListener('click', (e) => {
+      userPopup.classList.toggle('hidden');
+      cartPopup.classList.add('hidden');
+      megaMenu.classList.add('hidden');
+    });
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+    mobileClose?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+    // Close on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+
+    // Click outside to close (basic)
+    document.addEventListener('click', (e) => {
+      if (!categoryBtn?.contains(e.target) && !megaMenu?.contains(e.target)) {
+        megaMenu?.classList.add('hidden');
+      }
+      if (!cartBtn?.contains(e.target) && !cartPopup?.contains(e.target)) {
+        cartPopup?.classList.add('hidden');
+      }
+      if (!userBtn?.contains(e.target) && !userPopup?.contains(e.target)) {
+        userPopup?.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

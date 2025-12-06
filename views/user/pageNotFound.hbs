@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Armor — 404 Not Found</title>
+
+  <!-- Inter font for closer match -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN for quick demo (for production, compile Tailwind). -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Set font-family via small inline style (allowed) */
+    :root { --site-font: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    html, body { font-family: var(--site-font); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ===== NAVBAR (reusable) ===== -->
+  <header class="bg-[#1f6a8b]">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center justify-between h-14 border-b border-white/10">
+        <!-- left info -->
+        <div class="hidden sm:flex items-center text-sm text-white/90 gap-4">
+          <span>Welcome to Clicon online eCommerce store.</span>
+        </div>
+
+        <!-- center logo -->
+        <div class="mx-auto">
+          <a href="/" class="inline-flex items-center gap-3 text-white">
+            <span class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10">
+              <!-- simple circle logo -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="12" r="9" stroke="white" stroke-opacity="0.95" stroke-width="1.2"></circle>
+                <circle cx="12" cy="12" r="3.6" fill="white"></circle>
+              </svg>
+            </span>
+            <span class="hidden md:inline-block font-semibold tracking-wide">ARMOR</span>
+          </a>
+        </div>
+
+        <!-- right social / controls -->
+        <div class="flex items-center gap-3 text-white text-sm">
+          <div class="hidden md:flex items-center gap-3">
+            <!-- icons placeholders -->
+            <button aria-label="Twitter" class="opacity-90 hover:opacity-100">🐦</button>
+            <button aria-label="Facebook" class="opacity-90 hover:opacity-100">f</button>
+            <button aria-label="Pinterest" class="opacity-90 hover:opacity-100">📌</button>
+            <button aria-label="YouTube" class="opacity-90 hover:opacity-100">▶</button>
+          </div>
+
+          <!-- language / currency -->
+          <div class="flex items-center gap-2">
+            <select aria-label="Language" class="bg-transparent text-white text-sm">
+              <option>Eng</option>
+              <option>Esp</option>
+            </select>
+            <select aria-label="Currency" class="bg-transparent text-white text-sm">
+              <option>USD</option>
+              <option>EUR</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN: 404 HERO ===== -->
+  <main class="min-h-[calc(100vh-56px)] flex items-center">
+    <section class="container mx-auto px-4 py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Big 404 title -->
+        <h1 class="text-[4.2rem] sm:text-[5.5rem] md:text-[7rem] leading-none font-extralight tracking-tight">
+          404 Not Found
+        </h1>
+
+        <!-- subtext -->
+        <p class="mt-6 text-sm text-gray-500 max-w-xl mx-auto">
+          Your visited page not found. You may go home page.
+        </p>
+
+        <!-- button -->
+        <div class="mt-10">
+          <a href="/" class="inline-block px-6 py-3 rounded-lg shadow-md bg-red-500 hover:bg-red-600 text-white font-medium transition">
+            Back to home page
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (reusable) ===== -->
+  <footer class="border-t py-6">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-gray-500">© <span id="year"></span> ARMOR. All rights reserved.</p>
+
+      <nav class="flex gap-4 text-xs">
+        <a href="#" class="text-gray-500 hover:text-gray-700">Privacy</a>
+        <a href="#" class="text-gray-500 hover:text-gray-700">Terms</a>
+        <a href="#" class="text-gray-500 hover:text-gray-700">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // small script for footer year (keeps file static-friendly)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
