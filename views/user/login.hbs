@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Armor — Sign In</title>
+  <!-- Tailwind CDN for quick demo. For production, compile Tailwind and use a custom config. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-gray-700 bg-white">
+  <!-- Header / Topbar -->
+  <header class="bg-blue-700 text-white">
+    <div class="container mx-auto px-4 py-2 text-sm flex items-center justify-between">
+      <div class="hidden sm:block">Welcome to Clicon online eCommerce store.</div>
+      <div class="flex items-center gap-4">
+        <nav class="flex items-center gap-3">
+          <a href="#" class="hover:underline">Follow us:</a>
+          <!-- social icons placeholders -->
+          <span class="sr-only">Social icons</span>
+        </nav>
+        <div class="flex items-center gap-2">
+          <select class="bg-transparent text-white text-sm focus:outline-none">
+            <option>Eng</option>
+          </select>
+          <select class="bg-transparent text-white text-sm focus:outline-none">
+            <option>USD</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Main nav -->
+    <div class="border-t border-blue-600">
+      <div class="container mx-auto px-4 py-4 flex items-center gap-4">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Logo placeholder (replace with real image) -->
+          <!-- Put logo image here: /images/logo.png width=160 height=40 -->
+          <img src="/images/logo.svg" alt="Armor" width="160" height="40" class="h-10 w-auto" />
+        </a>
+
+        <div class="flex-1 hidden md:block">
+          <label class="sr-only" for="search">Search</label>
+          <div class="relative">
+            <input id="search" class="w-full rounded-md py-3 px-4 text-sm" placeholder="Search for anything..." />
+            <button aria-label="search" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">
+              <!-- svg search -->
+              🔍
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 ml-auto">
+          <a href="#" class="hidden sm:inline-block px-4 py-2 rounded-md bg-white bg-opacity-10">All Category</a>
+          <a href="#" class="p-2 rounded-full hover:bg-white/10">🛒</a>
+          <a href="#" class="p-2 rounded-full hover:bg-white/10">❤</a>
+          <a href="#" class="p-2 rounded-full hover:bg-white/10">👤</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-8">
+      <ol class="flex items-center gap-2">
+        <li>Home</li>
+        <li>&gt;</li>
+        <li>User Account</li>
+        <li>&gt;</li>
+        <li class="text-blue-700">Sign In</li>
+      </ol>
+    </nav>
+
+    <section class="flex justify-center">
+      <!-- Centered sign-in card -->
+      <article class="w-full max-w-md bg-white rounded-lg shadow-xl p-6 md:p-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-lg font-semibold">Sign In</h2>
+          <a href="#" class="text-sm text-gray-400">Sign Up</a>
+        </div>
+
+        <form class="space-y-4" action="#" method="POST">
+          <div>
+            <label for="email" class="block text-sm text-gray-600 mb-1">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="you@domain.com" class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" required />
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="password" class="block text-sm text-gray-600">Password</label>
+              <a href="#" class="text-sm text-blue-500">Forget Password</a>
+            </div>
+            <div class="relative">
+              <input id="password" name="password" type="password" placeholder="••••••••" class="w-full border rounded px-3 py-2 text-sm pr-10 focus:outline-none focus:ring-2 focus:ring-orange-400" required />
+              <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">👁️</button>
+            </div>
+          </div>
+
+          <div>
+            <button class="w-full bg-orange-500 text-white py-3 rounded text-sm font-medium hover:bg-orange-600">SIGN IN →</button>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="flex-1 border-t"></div>
+            <div class="text-sm text-gray-400">or</div>
+            <div class="flex-1 border-t"></div>
+          </div>
+
+          <div class="space-y-3">
+            <button type="button" class="w-full border rounded py-2 flex items-center justify-center gap-3 text-sm">
+              <!-- Google icon placeholder -->
+              <img src="/images/icons/google.png" alt="Google" width="20" height="20" class="h-5 w-5" />
+              Login with Google
+            </button>
+            <button type="button" class="w-full border rounded py-2 flex items-center justify-center gap-3 text-sm">
+              <img src="/images/icons/apple.png" alt="Apple" width="20" height="20" class="h-5 w-5" />
+              Login with Apple
+            </button>
+          </div>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-16">
+    <div class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <!-- Logo placeholder -->
+        <img src="/images/logo-white.svg" alt="Armor" width="140" height="40" class="h-10 w-auto mb-4" />
+        <p class="text-sm">Customer Supports:<br/>(629) 555-0129<br/>4517 Washington Ave.<br/>Manchester, Kentucky 39495</p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold mb-3 text-white">Top Category</h3>
+        <ul class="text-sm space-y-2">
+          <li>Shop Product</li>
+          <li>Shopping Cart</li>
+          <li>Wishlist</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold mb-3 text-white">Quick Links</h3>
+        <ul class="text-sm space-y-2">
+          <li>Compare</li>
+          <li>Track Order</li>
+          <li>Customer Help</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold mb-3 text-white">Download App</h3>
+        <div class="space-y-3">
+          <div class="border rounded p-3 text-sm flex items-center gap-3">Get it now - Google Play</div>
+          <div class="border rounded p-3 text-sm flex items-center gap-3">Get it now - App Store</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 py-4 text-center text-sm">Kinbo - eCommerce Template © 2021. Design by Templatecookie</div>
+  </footer>
+  <script>
+    // --- Complete Modern Validation ---
+    const form = document.querySelector('form');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    function showError(input, message) {
+      let container = input.parentElement;
+      let error = container.querySelector('.error-msg');
+      if (!error) {
+        error = document.createElement('p');
+        error.className = 'error-msg text-red-500 text-xs mt-1';
+        container.appendChild(error);
+      }
+      error.textContent = message;
+      input.classList.add('border-red-500');
+      input.classList.remove('border-green-500');
+    }
+
+    function showSuccess(input) {
+      let container = input.parentElement;
+      let error = container.querySelector('.error-msg');
+      if (error) error.remove();
+      input.classList.add('border-green-500');
+      input.classList.remove('border-red-500');
+    }
+
+    function validateEmail() {
+      const val = email.value.trim();
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (val === '') { showError(email, 'Email is required'); return false; }
+      if (!regex.test(val)) { showError(email, 'Enter a valid email'); return false; }
+      showSuccess(email);
+      return true;
+    }
+
+    function validatePassword() {
+      const val = password.value.trim();
+      const regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+      if (val === '') { showError(password, 'Password is required'); return false; }
+      if (!regex.test(val)) { showError(password, 'Min 8 chars, 1 uppercase, 1 number, 1 symbol'); return false; }
+      showSuccess(password);
+      return true;
+    }
+
+    email.addEventListener('input', validateEmail);
+    password.addEventListener('input', validatePassword);
+
+    form.addEventListener('submit', (e) => {
+      let valid = validateEmail() && validatePassword();
+      if (!valid) {
+        e.preventDefault();
+        form.classList.add('shake');
+        setTimeout(() => form.classList.remove('shake'), 500);
+      }
+    });
+  </script>
+</body>
+</html>

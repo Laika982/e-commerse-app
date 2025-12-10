@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Armor | Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              armorBlue: '#1c5fa8',
+              armorDarkBlue: '#0b457c',
+              armorOrange: '#ff6c2f',
+              armorGray: '#f5f7fb',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <style>
+    .error-message{
+      color:red;
+      font-size:0.75rem;
+      display:none
+    }
+  </style>
+  <body class="bg-white font-sans text-slate-800">
+    <!-- Top Bar -->
+    <header class="w-full">
+      <div class="bg-armorDarkBlue text-white text-xs">
+        <div
+          class="container mx-auto flex items-center justify-between px-4 py-2"
+        >
+          <p class="hidden sm:block">
+            Welcome to Clikon online eCommerce store.
+          </p>
+          <div class="ml-auto flex items-center gap-4">
+            <span class="hidden sm:inline">Follow us</span>
+            <div class="flex items-center gap-2 text-[11px]">
+              <span>FB</span>
+              <span>TW</span>
+              <span>IG</span>
+              <span>YT</span>
+            </div>
+          </div>
+          <div class="ml-4 flex items-center gap-2 text-[11px]">
+            <button class="flex items-center gap-1">
+              <span>Eng</span>
+              <span class="text-[10px]">▼</span>
+            </button>
+            <button class="flex items-center gap-1">
+              <span>USD</span>
+              <span class="text-[10px]">▼</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navbar -->
+      <nav class="border-b">
+        <div
+          class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4"
+        >
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-armorBlue text-xs font-bold text-armorBlue"
+              >O</span
+            >
+            <span class="text-lg font-semibold tracking-wide">ARMOR</span>
+          </a>
+
+          <!-- Search -->
+          <form
+            class="order-3 mt-2 w-full md:order-none md:mt-0 md:w-1/2"
+            role="search"
+          >
+            <div class="relative flex items-center">
+              <input
+                type="search"
+                class="w-full rounded border border-slate-200 py-2 pl-3 pr-9 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                placeholder="Search for anything..."
+              />
+              <button
+                type="submit"
+                class="absolute right-0 mr-2 text-xs text-slate-500"
+              >
+                🔍
+              </button>
+            </div>
+          </form>
+
+          <!-- Icons / Contact -->
+          <div
+            class="flex flex-1 items-center justify-end gap-4 text-xs text-slate-600"
+          >
+            <div class="hidden lg:flex items-center gap-4">
+              <button class="flex items-center gap-1">
+                <span>Track Order</span>
+              </button>
+              <button class="flex items-center gap-1">
+                <span>Compare</span>
+              </button>
+              <button class="flex items-center gap-1">
+                <span>Customer Support</span>
+              </button>
+              <button class="flex items-center gap-1">
+                <span>Need Help</span>
+              </button>
+            </div>
+
+            <div class="hidden md:flex flex-col text-right text-[11px]">
+              <span class="font-semibold text-slate-800"
+                >+1-202-555-0104</span
+              >
+              <span>24/7 Support Center</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-lg">
+              <button aria-label="Cart">🛒</button>
+              <button aria-label="Account">👤</button>
+            </div>
+          </div>
+
+          <!-- Category dropdown row -->
+          <div
+            class="order-4 mt-2 flex w-full flex-wrap items-center justify-between gap-2 border-t pt-3 text-xs text-slate-600 md:order-last md:border-0 md:pt-0"
+          >
+            <button
+              class="flex items-center gap-1 rounded border px-3 py-1 text-xs"
+            >
+              <span>All Category</span>
+              <span class="text-[10px]">▼</span>
+            </button>
+
+            <div class="flex flex-wrap items-center gap-4 text-[11px]">
+              <button>Track Order</button>
+              <button>Compare</button>
+              <button>Customer Support</button>
+              <button>Need Help</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-armorGray min-h-[60vh]">
+      <!-- Breadcrumb -->
+      <section class="border-b bg-white">
+        <div class="container mx-auto px-4 py-3 text-xs text-slate-500">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex flex-wrap items-center gap-1">
+              <li><a href="#" class="hover:text-armorBlue">Home</a></li>
+              <li>/</li>
+              <li>
+                <a href="#" class="hover:text-armorBlue">User Account</a>
+              </li>
+              <li>/</li>
+              <li class="text-slate-700">Sign Up</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Sign Up Card -->
+      <section class="py-10 sm:py-16 lg:py-24">
+        <div class="container mx-auto flex justify-center px-4">
+          <article
+            class="w-full max-w-md rounded bg-white p-6 shadow-md sm:p-8"
+            aria-label="Sign up form"
+          >
+            <!-- Tabs -->
+            <div class="mb-6 flex border-b text-sm">
+              <button
+                class="flex-1 border-b-2 border-transparent pb-2 text-center text-slate-500 hover:text-slate-800"
+              >
+                Sign In
+              </button>
+              <button
+                class="flex-1 border-b-2 border-armorOrange pb-2 text-center font-medium text-slate-900"
+              >
+                Sign Up
+              </button>
+            </div>
+
+            <form id="signform" class="space-y-4" method="post" action="/signup">
+              <!-- Name -->
+              <div class="space-y-1">
+                <label
+                  for="name"
+                  class="block text-xs font-medium text-slate-700"
+                  >Name</label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  class="w-full rounded border border-slate-200 px-3 py-2 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                />
+                <div id="error1" class="error-message"></div>
+              </div>
+
+              <!-- Email -->
+              <div class="space-y-1">
+                <label
+                  for="email"
+                  class="block text-xs font-medium text-slate-700"
+                  >Email Address</label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  class="w-full rounded border border-slate-200 px-3 py-2 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                />
+                <div id="error2" class="error-message"></div>
+              </div>
+
+              <!-- Password -->
+              <div class="space-y-1">
+                <label
+                  for="password"
+                  class="block text-xs font-medium text-slate-700"
+                  >Password</label
+                >
+                <div class="relative">
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="w-full rounded border border-slate-200 px-3 py-2 pr-9 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                  />
+                  <div id="error3" class="error-message"></div>
+                  <button
+                    type="button"
+                    class="absolute inset-y-0 right-0 mr-2 flex items-center text-xs text-slate-400"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁
+                  </button>
+                </div>
+                <p class="text-[11px] text-slate-500">8+ characters</p>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="space-y-1">
+                <label
+                  for="confirmPassword"
+                  class="block text-xs font-medium text-slate-700"
+                  >Confirm Password</label
+                >
+                <div class="relative">
+                  <input
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type="password"
+                    class="w-full rounded border border-slate-200 px-3 py-2 pr-9 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                  />
+                  <div id="error4" class="error-message"></div>
+                  <button
+                    type="button"
+                    class="absolute inset-y-0 right-0 mr-2 flex items-center text-xs text-slate-400"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁
+                  </button>
+                </div>
+              </div>
+
+              <!-- Referral Code -->
+              <div class="space-y-1">
+                <label
+                  for="referral"
+                  class="block text-xs font-medium text-slate-700"
+                  >Referral Code</label
+                >
+                <input
+                  id="referral"
+                  name="referral"
+                  type="text"
+                  class="w-full rounded border border-slate-200 px-3 py-2 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
+                />
+                <div id="error5" class="error-message"></div>
+              </div>
+
+              <!-- Terms -->
+              <div class="flex items-start gap-2 pt-1">
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  class="mt-[2px] h-3 w-3 rounded border-slate-300 text-armorOrange focus:ring-armorOrange"
+                />
+                <label for="terms" class="text-[11px] leading-snug">
+                  Are you agree to Clikon
+                  <a href="#" class="text-armorBlue underline"
+                    >Terms of Condition</a
+                  >
+                  and
+                  <a href="#" class="text-armorBlue underline">Privacy Policy</a
+                  >.
+                </label>
+              </div>
+
+              <!-- Primary Button -->
+              <button
+                type="submit"
+                class="mt-2 flex w-full items-center justify-center rounded bg-armorOrange py-2 text-sm font-semibold uppercase tracking-wide text-white hover:bg-orange-500"
+              >
+                Sign Up →
+              </button>
+
+              <!-- Divider -->
+              <div class="flex items-center gap-2 text-[11px] text-slate-400">
+                <div class="h-px flex-1 bg-slate-200"></div>
+                <span>or</span>
+                <div class="h-px flex-1 bg-slate-200"></div>
+              </div>
+
+              <!-- Social Buttons -->
+              <button
+                type="button"
+                class="flex w-full items-center justify-center gap-2 rounded border border-slate-200 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                <span class="text-base">G</span>
+                <span>Sign up with Google</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex w-full items-center justify-center gap-2 rounded border border-slate-200 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                <span class="text-base"></span>
+                <span>Sign up with Apple</span>
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    {{!-- <footer class="border-t bg-slate-900 text-slate-200">
+      <div
+        class="container mx-auto grid gap-8 px-4 py-10 text-sm md:grid-cols-4"
+      >
+        <!-- Brand -->
+        <div class="space-y-4">
+          <a href="#" class="flex items-center gap-2">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-armorOrange text-xs font-bold text-armorOrange"
+              >O</span
+            >
+            <span class="text-lg font-semibold tracking-wide">ARMOR</span>
+          </a>
+          <div class="space-y-1 text-xs text-slate-400">
+            <p class="font-semibold text-slate-200">Customer Support:</p>
+            <p>(629) 555-0129</p>
+            <p>4517 Washington Ave,</p>
+            <p>Manchester, Kentucky 39495</p>
+            <p>info@kinbo.com</p>
+          </div>
+        </div>
+
+        <!-- Top Category -->
+        <div>
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide">
+            Top Category
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#" class="hover:text-white">Game</a></li>
+            <li><a href="#" class="hover:text-white">iPhone</a></li>
+            <li><a href="#" class="hover:text-white">TV</a></li>
+            <li><a href="#" class="hover:text-white">Macbook</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide">
+            Quick Links
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#" class="hover:text-white">Shop Product</a></li>
+            <li><a href="#" class="hover:text-white">Shopping Cart</a></li>
+            <li><a href="#" class="hover:text-white">Wishlist</a></li>
+            <li><a href="#" class="hover:text-white">Compare</a></li>
+            <li><a href="#" class="hover:text-white">Track Order</a></li>
+            <li><a href="#" class="hover:text-white">Customer Help</a></li>
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Download & Tags -->
+        <div class="space-y-4">
+          <div>
+            <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide">
+              Download App
+            </h3>
+            <div class="space-y-2 text-xs text-slate-400">
+              <button
+                class="flex w-full items-center justify-between rounded bg-slate-800 px-3 py-2 text-left hover:bg-slate-700"
+              >
+                <div>
+                  <p class="text-[10px]">Get it on</p>
+                  <p class="text-sm font-semibold">Google Play</p>
+                </div>
+                <span>▶</span>
+              </button>
+              <button
+                class="flex w-full items-center justify-between rounded bg-slate-800 px-3 py-2 text-left hover:bg-slate-700"
+              >
+                <div>
+                  <p class="text-[10px]">Get it on</p>
+                  <p class="text-sm font-semibold">App Store</p>
+                </div>
+                <span></span>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide">
+              Popular Tag
+            </h3>
+            <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Game</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >iPhone</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1">TV</span>
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Asus Laptop</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >SSD</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Graphics Card</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Speaker</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Smart TV</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Tablet</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Microwave</span
+              >
+              <span class="rounded border border-slate-700 px-2 py-1"
+                >Samsung</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 bg-slate-900">
+        <div
+          class="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-4 text-[11px] text-slate-500 sm:flex-row"
+        >
+          <p>Kinbo - eCommerce Template © 2021. Design by Templatecookie</p>
+          <p>All Rights Reserved</p>
+        </div>
+      </div>
+    </footer> --}}
+  </body>
+
+<script>
+  const nameid = document.getElementById("name");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const confirmPassword = document.getElementById("confirmPassword");
+
+  const error1 = document.getElementById("error1");
+  const error2 = document.getElementById("error2");
+  const error3 = document.getElementById("error3");
+  const error4 = document.getElementById("error4");
+
+  const signform = document.getElementById("signform");
+
+  // Name validation
+  function nameValidateChecking() {
+    const nameval = nameid.value.trim();
+    const namepattern = /^[A-Za-z\s]+$/;
+
+    if (nameval === "") {
+      error1.style.display = "block";
+      error1.innerHTML = "Please enter your name";
+    } else if (!namepattern.test(nameval)) {
+      error1.style.display = "block";
+      error1.innerHTML = "Name can only contain alphabets and spaces";
+    } else {
+      error1.style.display = "none";
+      error1.innerHTML = "";
+    }
+  }
+
+  // Email validation
+  function emailValidateChecking() {
+    const emailval = email.value.trim();
+
+    // FIXED: Email regex
+    const emailpattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (emailval === "") {
+      error2.style.display = "block";
+      error2.innerHTML = "Email is required";
+    } else if (!emailpattern.test(emailval)) {
+      error2.style.display = "block";
+      error2.innerHTML = "Invalid email format";
+    } else {
+      error2.style.display = "none";
+      error2.innerHTML = "";
+    }
+  }
+
+  // Password validation
+  function passwordValidateChecking() {
+    const passval = password.value.trim();
+    const confirmPassVal = confirmPassword.value.trim();
+    const alpha = /[a-zA-Z]/;
+    const digit = /\d/;
+
+    if (passval.length < 8) {
+      error3.style.display = "block";
+      error3.innerHTML = "Password must be at least 8 characters";
+    } else if (!alpha.test(passval) || !digit.test(passval)) {
+      error3.style.display = "block";
+      error3.innerHTML = "Password must contain letters and numbers";
+    } else {
+      error3.style.display = "none";
+      error3.innerHTML = "";
+    }
+
+    // Confirm password
+    if (passval !== confirmPassVal) {
+      error4.style.display = "block";
+      error4.innerHTML = "Passwords do not match";
+    } else {
+      error4.style.display = "none";
+      error4.innerHTML = "";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    signform.addEventListener("submit", function (e) {
+      nameValidateChecking();
+      emailValidateChecking();
+      passwordValidateChecking();
+
+      // ❗ If any error message is NOT empty, stop the form
+      if (
+        error1.innerHTML !== "" ||
+        error2.innerHTML !== "" ||
+        error3.innerHTML !== "" ||
+        error4.innerHTML !== ""
+      ) {
+        e.preventDefault();
+      }
+    });
+  });
+</script>
+
+</html>

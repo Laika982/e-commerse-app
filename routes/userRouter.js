@@ -6,6 +6,9 @@ const userContoller = require("../controllers/user/userController");
 router.get("/",userContoller.loadHomepage);
 //pageNotFound
 router.get("/pageNotFound",userContoller.pageNotFound);
+//signup
+router.get("/signup",userContoller.loadSignupPage);
+router.post("/signup",userContoller.signup);
 
 
 
