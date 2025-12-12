@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const hbs = require("hbs");
-const path = require("path")
+const path = require("path");
+const session = require("express-session")
 const env = require('dotenv').config();
 const connectDB = require('./config/db');
 const userRouter = require("./routes/userRouter")
@@ -12,6 +13,18 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,"public")));
+
+//session midilware
+app.use(session({
+    secret:process.env.SESSION_SECRET,
+    resave:false,
+    saveUninitialized:true,
+    cookie:{
+        secure:false,
+        httpOnly:true,
+        maxAge:72*60*60*1000
+    }
+}))
 
 //set up viewengine
 app.set("view engine","hbs");
