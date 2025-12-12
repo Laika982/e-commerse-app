@@ -189,7 +189,7 @@
               </button>
             </div>
 
-            <form id="signform" class="space-y-4" method="post" action="/signup">
+            <form id="signform" class="space-y-4" method="post" action="/signup" >
               <!-- Name -->
               <div class="space-y-1">
                 <label
@@ -202,6 +202,7 @@
                   name="name"
                   type="text"
                   autocomplete="name"
+                  required
                   class="w-full rounded border border-slate-200 px-3 py-2 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
                 />
                 <div id="error1" class="error-message"></div>
@@ -219,6 +220,7 @@
                   name="email"
                   type="email"
                   autocomplete="email"
+                  required
                   class="w-full rounded border border-slate-200 px-3 py-2 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
                 />
                 <div id="error2" class="error-message"></div>
@@ -236,6 +238,7 @@
                     id="password"
                     name="password"
                     type="password"
+                    required
                     class="w-full rounded border border-slate-200 px-3 py-2 pr-9 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
                   />
                   <div id="error3" class="error-message"></div>
@@ -262,6 +265,7 @@
                     id="confirmPassword"
                     name="confirmPassword"
                     type="password"
+                    required
                     class="w-full rounded border border-slate-200 px-3 py-2 pr-9 text-sm outline-none focus:border-armorBlue focus:ring-1 focus:ring-armorBlue"
                   />
                   <div id="error4" class="error-message"></div>
