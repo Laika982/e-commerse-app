@@ -3,6 +3,7 @@ const app = express();
 const hbs = require("hbs");
 const path = require("path");
 const session = require("express-session");
+const passport = require("./config/passport");
 const env = require('dotenv').config();
 const connectDB = require('./config/db');
 const userRouter = require("./routes/userRouter")
@@ -25,6 +26,10 @@ app.use(session({
         maxAge:72*60*60*1000
     }
 }))
+
+//passport initialize
+app.use(passport.initialize());
+app.use(passport.session());
 
 //set up viewengine
 app.set("view engine","hbs");
