@@ -129,7 +129,7 @@
                     <div id="otpTimer" class="otp-timer">
                         <span id="timerValue">60</span>
                     </div>
-                    <button type="button" class="btn btn-secondary">Resend OTP</button>
+                    <button type="button" class="btn btn-secondary" onclick="resentOTP()">Resend OTP</button>
                 </div>
                     {{#if message}}
                         <div class="alert alert-danger">{{message}}</div>
@@ -165,7 +165,7 @@
     startTimer();
 
     function validateOTPForm(){
-        const otptinput = document.getElementById("otp").value
+        const otpInput = document.getElementById("otp").value.trim();
 
         $.ajax({
             type:"POST",
@@ -184,7 +184,7 @@
                 }else{
                     Swal.fire({
                         icon:"error",
-                        title:"error",
+                        title:"Error",
                         text:response.message,
 
                     })
@@ -201,8 +201,47 @@
         return false;
     }
 
+    function resentOTP(){
+        console.log("resent otp frond end")
+        clearInterval(timerInterval);
+        timer = 60;
+        document.getElementById("otp").disabled=false;
+        document.getElementById("timerValue").classList.remove("expired")
+        startTimer();
+        $.ajax({
+            type:"POST",
+            url:"/resend-otp",
+            success:function(response){
+                
+                if(response.success){
+                    Swal.fire({
+                        icon:"success",
+                        title:"OTP resent successfully",
+                        text:response.message || "Please check your email.",
+                        showConfirmButton:false,
+                        timer:1500
+                })
+                }else{
+                    Swal.fire({
+                        icon:"error",
+                        title:"Error",
+                        text:response.message || "Error occurred resending OTP",
+
+                    })
+                }
+            },
+            error:function(){
+                Swal.fire({
+                    icon:"error",
+                    title:"Error",
+                    text:"Error occurred resending OTP"
+                })
+            }
+        })
+        return false
+    }
+
 </script>
-{{> user/footer }}
 </body>
 </html>
 

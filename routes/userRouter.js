@@ -1,15 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const userContoller = require("../controllers/user/userController");
+const userController = require("../controllers/user/userController");
 
 //userRouter homepage
-router.get("/",userContoller.loadHomepage);
+router.get("/",userController.loadHomepage);
 //pageNotFound
-router.get("/pageNotFound",userContoller.pageNotFound);
+router.get("/pageNotFound",userController.pageNotFound);
 //signup
-router.get("/signup",userContoller.loadSignupPage);
-router.post("/signup",userContoller.signup);
-
+router.get("/signup",userController.loadSignupPage);
+router.post("/signup",userController.signup);
+//Verify-OTP
+router.post("/verify-otp",userController.verifyOtp);
+//Resend OTP
+router.post("/resend-otp",userController.resendOtp)
 
 
 

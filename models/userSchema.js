@@ -13,6 +13,8 @@ const userSchema = new mongoose.Schema({
     googleId: {
         type : String,
         unique:true,
+        sparse:true,
+        default:null
     },
     secondary_email: {
         type:String,
@@ -25,7 +27,7 @@ const userSchema = new mongoose.Schema({
     referalCode:{
         type:String,
         required: false,
-        unique: true
+        default:null
     },
     displayName:{
         type:String,
@@ -53,5 +55,8 @@ const userSchema = new mongoose.Schema({
     default:false
     }
 })
+
+userSchema.set("autoIndex", false);
+userSchema.set("autoCreate", false);
 
 module.exports = mongoose.model("User",userSchema);
