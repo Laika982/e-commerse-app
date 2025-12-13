@@ -14,17 +14,15 @@ router.post("/signup",userController.signup);
 router.post("/verify-otp",userController.verifyOtp);
 //Resend OTP
 router.post("/resend-otp",userController.resendOtp);
-
-
 //Google auth route
 router.get("/auth/google",passport.authenticate("google",{scope:["profile","email"],prompt: "select_account"}));
 //success or failure
 router.get("/auth/google/callback",passport.authenticate("google",{failureRedirect:"/signup"}),(req,res)=>{
-    if (req.user.isNew) {
-      return res.redirect("/complete-profile");
-    }
     res.redirect("/");
 })
+//Login
+router.get("/login",userController.loadLogin);
+router.post("/login",userController.login);
 
 
 module.exports = router;

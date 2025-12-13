@@ -93,6 +93,14 @@
               <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">👁️</button>
             </div>
           </div>
+  
+            {{#if message}}
+                 <div class="bg-red-100 text-red-700 text-center px-4 py-2 rounded mb-4">
+                    {{message}}
+                 </div>
+              {{/if}}
+
+
 
           <div>
             <button class="w-full bg-orange-500 text-white py-3 rounded text-sm font-medium hover:bg-orange-600">SIGN IN →</button>
@@ -105,11 +113,10 @@
           </div>
 
           <div class="space-y-3">
-            <button type="button" class="w-full border rounded py-2 flex items-center justify-center gap-3 text-sm">
-              <!-- Google icon placeholder -->
+            <a href="/auth/google" class="w-full border rounded py-2 flex items-center justify-center gap-3 text-sm">
               <img src="/images/icons/google.png" alt="Google" width="20" height="20" class="h-5 w-5" />
               Login with Google
-            </button>
+            </a>
             <button type="button" class="w-full border rounded py-2 flex items-center justify-center gap-3 text-sm">
               <img src="/images/icons/apple.png" alt="Apple" width="20" height="20" class="h-5 w-5" />
               Login with Apple
@@ -194,14 +201,14 @@
       return true;
     }
 
-    function validatePassword() {
+    {{!-- function validatePassword() {
       const val = password.value.trim();
       const regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
       if (val === '') { showError(password, 'Password is required'); return false; }
       if (!regex.test(val)) { showError(password, 'Min 8 chars, 1 uppercase, 1 number, 1 symbol'); return false; }
       showSuccess(password);
       return true;
-    }
+    } --}}
 
     email.addEventListener('input', validateEmail);
     password.addEventListener('input', validatePassword);

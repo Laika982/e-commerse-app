@@ -1,6 +1,7 @@
 const User = require("../../models/userSchema");
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcrypt");
+const req = require("express/lib/request");
 const env = require("dotenv").config();
 
 
@@ -13,6 +14,7 @@ const pageNotFound = async (req,res)=>{
         return res.redirect("/pageNotFound");
     }
 }
+
 //load homepage
 const loadHomepage = async (req,res)=>{
     try {
@@ -30,6 +32,7 @@ const loadSignupPage = async (req,res)=>{
         console.log(error);
     }
 }
+
 //generate OTP function
 function generateOtp(){
     return Math.floor(100000 + Math.random()*900000).toString()
@@ -185,6 +188,48 @@ const resendOtp = async (req,res)=>{
     }
 }
 
+//Loadlogin
+const loadLogin = async (req,res)=>{
+    try {
+      if(!req.session.user){
+        res.render("user/login");
+      }else{
+        res.redirect("/")
+      }
+    } catch (error) {
+        console.log("login error",error);
+        res.status(400).redirect("pageNotFound")
+    }
+}
+
+//Login
+const login = async (req,res)=>{
+    try {
+        const {email,password} = req.body
+
+        const findUser = await User.findOne({isAdmin:0,email:email});
+
+        if(!findUser){
+            return res.render("user/login",{message:"user not found"});
+        }
+        if(findUser.isBlocked){
+            res.render("user/login",{message:"User Blocked By Admin"});
+        }
+
+        const passwordMatch = await bcrypt.compare(password,findUser.password);
+
+        if(!passwordMatch){
+            return res.render("user/login",{message:"Incorrect Password"})
+        }
+
+        req.session.user = findUser._id
+        res.redirect("/")
+    } catch (error) {
+        console.log("login error",error);
+        res.status(400).render("user/login",{message:"Login failed. Please try again latter"});
+    }
+}
+
 
 
 module.exports = {
@@ -193,5 +238,7 @@ module.exports = {
     loadSignupPage,
     signup,
     verifyOtp,
-    resendOtp
+    resendOtp,
+    loadLogin,
+    login
 }
