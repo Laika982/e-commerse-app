@@ -23,6 +23,12 @@ router.get("/auth/google/callback",passport.authenticate("google",{failureRedire
 //Login
 router.get("/login",userController.loadLogin);
 router.post("/login",userController.login);
+//logout
+router.get("/logout",userController.logout);
 
+
+//test
+
+  
 
 module.exports = router;

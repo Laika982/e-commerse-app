@@ -18,7 +18,13 @@ const pageNotFound = async (req,res)=>{
 //load homepage
 const loadHomepage = async (req,res)=>{
     try {
-        return res.render("user/home")
+        const user = req.session.user;
+        if(user){
+            const userData = await User.findOne({_id:user._id});
+            res.render("user/home",{user:userData});
+        }else{
+            return res.render("user/home");
+        }
     } catch (error) {     
         console.log(error);      
     }
@@ -230,6 +236,23 @@ const login = async (req,res)=>{
     }
 }
 
+//logOut
+const logout = async (req,res)=>{
+    try {
+        req.session.destroy((err)=>{
+            if(err){
+            console.log("logout session error",err);
+            res.redirect("pageNotFound");
+            }
+            return res.redirect("/login");
+        })
+    } catch (error) {
+        console.log("logout erroe",error);
+        
+        res.redirect("pageNotFound");
+    }
+}
+
 
 
 module.exports = {
@@ -240,5 +263,6 @@ module.exports = {
     verifyOtp,
     resendOtp,
     loadLogin,
-    login
+    login,
+    logout
 }

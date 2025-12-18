@@ -71,7 +71,20 @@
           </button>
           <button id="userBtn" aria-haspopup="true" aria-expanded="false" class="p-2 bg-white/10 rounded">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22c0-4 4-7 10-7s10 3 10 7" stroke-width="1.5"/></svg>
+
+
+            {{#if user}}
+  <script>
+    window.location.href = "/account";
+  </script>
+{{else}}
+  <!-- Home page content for guest -->
+  
+{{/if}}
+
           </button>
+
+          
         </div>
 
         <!-- Mobile menu toggle -->
@@ -96,4 +109,27 @@
         </div>
       </div>
     </nav>
+
+    <!-- LOGIN MODAL (hidden) -->
+  <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative popup-shadow bg-white rounded-md w-full max-w-md p-6 z-10">
+      <h3 class="text-lg font-semibold">Sign in to your account</h3>
+      <form class="mt-4 space-y-4">
+        <div>
+          <label class="block text-sm text-gray-600">Email Address</label>
+          <input type="email" class="w-full border rounded px-3 py-2 mt-1" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-600">Password</label>
+          <input type="password" class="w-full border rounded px-3 py-2 mt-1" />
+        </div>
+        <div class="flex items-center gap-3">
+          <!-- <a href="/login"  class="bg-orange-500 text-white px-4 py-2 rounded" >login an</a> -->
+          <button type="button" class="bg-orange-500 text-white px-4 py-2 rounded">LOGIN →</button>
+          <button id="closeLogin" type="button" class="border px-4 py-2 rounded">CANCEL</button>
+        </div>
+      </form>
+    </div>
+  </div>
   </header>
