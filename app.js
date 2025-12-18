@@ -6,7 +6,8 @@ const session = require("express-session");
 const passport = require("./config/passport");
 const env = require('dotenv').config();
 const connectDB = require('./config/db');
-const userRouter = require("./routes/userRouter")
+const userRouter = require("./routes/userRouter");
+const adminRouter = require("./routes/adminRouter");
 connectDB();
 
 
@@ -37,7 +38,9 @@ app.set("views",path.join(__dirname,"views"));
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 //userRouter middleware
-app.use("/",userRouter) 
+app.use("/",userRouter); 
+//adminrouter middleware
+app.use("/admin",adminRouter);
 
 
 
