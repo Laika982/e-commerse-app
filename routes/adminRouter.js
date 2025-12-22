@@ -5,6 +5,9 @@ const adminController =require("../controllers/admin/adminController");
 
 //adminLogin
 router.get("/login",adminController.loadLogin);
+//loadAdminDashboard
+router.post("/login",adminController.adminLogin);
+router.get("/",adminController.loadAdminDashboard);
 
 
 
