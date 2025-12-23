@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+{{!-- <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -123,4 +123,142 @@ body {
                     </li>
                 </ul>
             </div>
-        </header>
+        </header> --}}
+
+
+
+
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEX Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .sidebar-link {
+    @apply block px-4 py-3 rounded-lg transition-colors;
+  }
+  .sidebar-link:hover {
+    @apply bg-blue-100;
+  }
+  .sidebar-link.active {
+    @apply bg-blue-600 text-white shadow;
+  }
+</style>
+
+</head>
+
+<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
+
+
+<aside class="fixed inset-y-0 left-0 w-64 bg-blue-50 border-r hidden md:flex flex-col z-30">
+  <div class="h-16 flex items-center justify-center font-bold text-lg border-b">
+    NEX
+  </div>
+
+  <nav class="flex-1 px-4 py-4 space-y-2">
+    <a href="#dashboard"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors bg-blue-600 text-white shadow">
+      Dashboard
+    </a>
+
+    <a href="#products"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      All Products
+    </a>
+
+    <a href="#customers"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Customers
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#orders"
+       class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
+      Order List
+    </a>
+
+    <a href="#" class="flex items-center gap-3 px-4 py-3 text-red-500 rounded-lg hover:bg-red-50">Logout</a>
+
+
+  </nav>
+</aside>
+
+
+
+<!-- PAGE WRAPPER (RESERVES SIDEBAR SPACE) -->
+<div class="md:pl-64 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-20 bg-white border-b h-16">
+    <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
+      <h1 class="text-xl font-semibold">Welcome!</h1>
+
+      <div class="flex items-center gap-4">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="px-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <img
+          src="https://i.pravatar.cc/40"
+          alt="Admin Avatar"
+          class="w-9 h-9 rounded-full"
+        />
+      </div>
+    </div>
+  </header>
+
+
+  
+<script>
+  const links = document.querySelectorAll(".sidebar-link");
+
+  links.forEach(link => {
+    link.addEventListener("pointerdown", function () {
+
+      links.forEach(item => {
+        item.classList.remove(
+          "bg-blue-600",
+          "text-white",
+          "shadow"
+        );
+        item.classList.add("hover:bg-blue-100");
+      });
+
+      this.classList.add(
+        "bg-blue-600",
+        "text-white",
+        "shadow"
+      );
+      this.classList.remove("hover:bg-blue-100");
+    });
+  });
+</script>
