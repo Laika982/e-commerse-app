@@ -1,263 +1,179 @@
-{{!--
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Men Fashion</title>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <link rel="shortcut icon" type="image/x-icon" href="#">
-  <link href="/admin-assets/css/main.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
-  <script src="https://kit.fontawesome.com/16d4885483.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <style>
-    body {
-      background-color: #ffffff;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            sidebar: '#EDF1F9',
+            brandBlue: '#0047FF',
+            cardBg: '#F5F8FF',
+            cardBorder: '#A5C0FF',
+            lightBlue: '#DDF0FF'
+          }
+        }
+      }
     }
-
-    .navbar {
-      background-color: #8da7ab;
-    }
-
-    .navbar-aside {
-      background-color: #b0d5de;
-    }
-
-    .menu-item a.menu-link {
-      color: #310505;
-    }
-
-    .menu-item a.menu-link:hover,
-    .menu-item a.menu-link.active {
-      background-color: #6e7e6e;
-      color: #ffffff;
-    }
-
-    .dropdown-menu {
-      background-color: #bb9aaf;
-    }
-
-    .dropdown-item:hover {
-      background-color: #33053d;
-      color: #ffffff;
-    }
-  </style>
+  </script>
 </head>
 
-<body>
-  <div class="screen-overlay"></div>
-  <aside class="navbar-aside" id="offcanvas_aside">
-    <div class="aside-top">
-      <a href="#" class="brand-wrap">
-        <img src="/img/logo.png" class="logo" alt="Men Fashion Dashboard">
-      </a>
-      <div>
-        <button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i>
-        </button>
-      </div>
+<body class="bg-white text-gray-800 font-sans antialiased h-screen flex overflow-hidden">
+
+  <div id="sidebarOverlay" class="fixed inset-0 bg-gray-900/50 z-40 hidden lg:hidden transition-opacity"></div>
+
+  <aside id="sidebar"
+    class="fixed inset-y-0 left-0 z-50 w-64 bg-sidebar h-full flex flex-col border-r border-gray-200 transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-300 ease-in-out shrink-0">
+    <div class="h-20 flex items-center justify-between px-8">
+      <h1 class="text-2xl font-black text-gray-500 tracking-wider">ARMOR</h1>
+      <button id="closeSidebarBtn" class="lg:hidden p-2 text-gray-500 hover:bg-gray-200 rounded-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
-    <nav>
-      <ul class="menu-aside">
-        <li class="menu-item">
-          <a class="menu-link" href="/admin"> <i class="icon material-icons md-home"></i>
-            <span class="text">Dashboard</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/users"> <i class="icon material-icons md-person"></i>
-            <span class="text">Customers</span>
-          </a>
 
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/category"> <i class="icon material-icons md-person"></i>
-            <span class="text">Category</span>
-          </a>
+    <nav class="flex-1 mt-4 space-y-2 overflow-y-auto px-4 pb-4">
+      <a href="/admin/"
+        class="flex items-center gap-4 bg-brandBlue text-white px-4 py-3.5 rounded-xl shadow-md font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+          </path>
+        </svg>
+        DASHBOARD
+      </a>
 
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/brands"> <i class="icon material-icons md-stars"></i>
-            <span class="text">Brands</span> </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/addProducts"> <i class="icon material-icons md-add_box"></i>
-            <span class="text">Add product</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/products"> <i class="icon material-icons md-shopping_bag"></i>
-            <span class="text">Products</span>
-          </a>
-        </li>
+      <a href="/admin/products"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        ALL PRODUCTS
+      </a>
 
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/coupon"> <i class="icon material-icons md-class"></i>
-            <span class="text">Coupon</span> </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/banner"> <i class="icon material-icons md-photo_size_select_actual"></i>
-            <span class="text">Banner</span> </a>
-        </li>
+      <a href="/admin/users"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+          </path>
+        </svg>
+        CUSTOMERS
+      </a>
 
-        <li class="menu-item">
-          <a class="menu-link" href="/admin/orderList"> <i class="icon material-icons md-shopping_cart"></i>
-            <span class="text">Orders</span>
-          </a>
-        </li>
-      </ul>
+      <a href="/admin/orders"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+          </path>
+        </svg>
+        ORDER LIST
+      </a>
+
+      <a href="/admin/coupons"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+          </path>
+        </svg>
+        COUPON
+      </a>
+
+      <a href="/admin/categories"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+          </path>
+        </svg>
+        CATEGORY
+      </a>
+
+      <a href="/admin/offers"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+          </path>
+        </svg>
+        OFFER
+      </a>
+
+      <a href="/admin/banners"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+          </path>
+        </svg>
+        BANNER
+      </a>
+
+      <a href="/admin/sales-report"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide mt-4 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+        </svg>
+        Sales Report
+      </a>
     </nav>
+
+    <div class="p-4 mb-4">
+      <a href="/admin/logout"
+        class="flex items-center gap-4 text-gray-900 px-4 py-3.5 hover:bg-gray-200 rounded-xl font-bold text-sm tracking-wide transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+        </svg>
+        LOGOUT
+      </a>
+    </div>
   </aside>
-  <main class="main-wrap">
-    <header class="main-header navbar">
-      <div class="col-search">
-      </div>
-      <div class="col-nav">
-        <button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"> <i
-            class="material-icons md-apps"></i> </button>
-        <ul class="nav">
-          <li class="dropdown nav-item">
-            <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownAccount" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="/admin-assets/imgs/people/avatar2.jpg" alt="User"></a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownAccount">
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item text-danger" href="/admin/logout"><i
-                  class="material-icons md-exit_to_app"></i>Logout</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </header> --}}
 
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Get the current page URL path (e.g., "/admin/products")
+      const currentPath = window.location.pathname;
 
+      // 2. Select all the links inside the sidebar
+      const navLinks = document.querySelectorAll('#sidebar a');
 
+      // 3. Define the styling classes
+      const activeClasses = ['bg-brandBlue', 'text-white', 'shadow-md'];
+      const inactiveClasses = ['text-gray-900', 'hover:bg-gray-200'];
 
+      navLinks.forEach(link => {
+        // Get the href attribute of the link
+        const linkPath = link.getAttribute('href');
 
-    <!DOCTYPE html>
-    <html lang="en">
+        // 4. Reset every link to the inactive state first
+        link.classList.remove(...activeClasses);
+        link.classList.add(...inactiveClasses);
 
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>NEX Admin Dashboard</title>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <style>
-        .sidebar-link {
-          @apply block px-4 py-3 rounded-lg transition-colors;
+        // 5. Check if the current page path matches the link's href
+        // We check for an exact match, or an exact match with a trailing slash
+        if (currentPath === linkPath || currentPath === linkPath + '/') {
+          // Apply the active blue styling
+          link.classList.remove(...inactiveClasses);
+          link.classList.add(...activeClasses);
         }
-
-        .sidebar-link:hover {
-          @apply bg-blue-100;
-        }
-
-        .sidebar-link.active {
-          @apply bg-blue-600 text-white shadow;
-        }
-      </style>
-
-    </head>
-
-    <body class="bg-gray-100 text-gray-800 overflow-x-hidden">
-
-
-      <aside class="fixed inset-y-0 left-0 w-64 bg-blue-50 border-r hidden md:flex flex-col z-30">
-        <div class="h-16 flex items-center justify-center font-bold text-lg border-b">
-          NEX
-        </div>
-
-        <nav class="flex-1 px-4 py-4 space-y-2">
-          <a href="#dashboard"
-            class="sidebar-link block px-4 py-3 rounded-lg transition-colors bg-blue-600 text-white shadow">
-            Dashboard
-          </a>
-
-          <a href="#products" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            All Products
-          </a>
-
-          <a href="/admin/users" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Customers
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="#orders" class="sidebar-link block px-4 py-3 rounded-lg transition-colors hover:bg-blue-100">
-            Order List
-          </a>
-
-          <a href="/admin/logout"
-            class="flex items-center gap-3 px-4 py-3 text-red-500 rounded-lg hover:bg-red-50">Logout</a>
-
-
-        </nav>
-      </aside>
-
-
-
-      <!-- PAGE WRAPPER (RESERVES SIDEBAR SPACE) -->
-      <div class="md:pl-64 min-h-screen flex flex-col">
-
-        <!-- HEADER -->
-        <header class="sticky top-0 z-20 bg-white border-b h-16">
-          <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
-            <h1 class="text-xl font-semibold">Welcome!</h1>
-
-            <div class="flex items-center gap-4">
-              <input type="text" placeholder="Search..."
-                class="px-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <img src="https://i.pravatar.cc/40" alt="Admin Avatar" class="w-9 h-9 rounded-full" />
-            </div>
-          </div>
-        </header>
-
-
-
-        <script>
-          const links = document.querySelectorAll(".sidebar-link");
-
-          links.forEach(link => {
-            link.addEventListener("pointerdown", function () {
-
-              links.forEach(item => {
-                item.classList.remove(
-                  "bg-blue-600",
-                  "text-white",
-                  "shadow"
-                );
-                item.classList.add("hover:bg-blue-100");
-              });
-
-              this.classList.add(
-                "bg-blue-600",
-                "text-white",
-                "shadow"
-              );
-              this.classList.remove("hover:bg-blue-100");
-            });
-          });
-        </script>
+      });
+    });
+  </script>

@@ -22,7 +22,7 @@ const categorySchema = new mongoose.Schema(
       type: Boolean,
       required: true
     },
-    photo: {
+    image: {
       type: String,
       required: false
     }
