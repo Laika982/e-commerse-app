@@ -1,282 +1,268 @@
-{{> user/header }}
+{{>user/header}}
 
-  <!-- MEGA MENU (hidden by default) -->
-  <div id="megaMenu" class="hidden absolute left-0 right-0 z-40 mt-2">
-    <div class="container mx-auto px-4">
-      <div class="bg-white rounded shadow-lg grid grid-cols-1 lg:grid-cols-3 p-4 gap-4">
-        <ul class="space-y-2 border-r pr-4">
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Bomber Jackets</li>
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Casual Jackets</li>
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Denim Jackets</li>
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Leather Jackets</li>
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Puffer Jackets</li>
-          <li class="px-3 py-2 hover:bg-gray-50 rounded">Racer Jackets</li>
-        </ul>
 
-        <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 class="font-semibold mb-3">Featured Jackets</h4>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3 p-3 border rounded">
-                <div class="w-14 h-14 bg-gray-100 rounded overflow-hidden"><!-- Thumb --></div>
-                <div>
-                  <div class="text-sm font-medium">Denim Jacket: Arctic</div>
-                  <div class="text-xs text-blue-600">$160</div>
-                </div>
-              </li>
-              <li class="flex items-center gap-3 p-3 border rounded">
-                <div class="w-14 h-14 bg-gray-100 rounded overflow-hidden"><!-- Thumb --></div>
-                <div>
-                  <div class="text-sm font-medium">Superman: Denim Jackets</div>
-                  <div class="text-xs text-blue-600">$1,500</div>
-                </div>
-              </li>
-            </ul>
-          </div>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
-          <div class="bg-yellow-50 p-4 rounded flex flex-col justify-between">
-            <div>
-              <h3 class="text-2xl font-bold">21% Discount</h3>
-              <p class="mt-2 text-sm text-gray-700">Escape the world, to a world of comfort and peace</p>
-            </div>
-            <div class="mt-4">
-              <div class="inline-block bg-white px-3 py-1 rounded text-sm font-semibold">$99 USD</div>
-              <div class="mt-4">
-                <a href="#" class="inline-block bg-orange-500 text-white px-4 py-2 rounded shadow">SHOP NOW</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section
+    class="mt-4 bg-[#eaf6f2] rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+    <div class="absolute top-10 left-10 w-4 h-4 bg-white opacity-50 transform rotate-45"></div>
+    <div class="absolute top-20 right-1/2 w-6 h-6 bg-white opacity-50 transform rotate-12"></div>
+    <div class="absolute bottom-20 left-1/4 w-8 h-8 bg-white opacity-30 transform rotate-45"></div>
+
+    <div class="w-full md:w-1/2 mb-10 md:mb-0 relative z-10">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 relative inline-block">
+        Let's configure you own <br> <span class="relative">print product
+          <svg class="absolute w-full h-8 -bottom-4 left-0 text-gray-800" viewBox="0 0 200 30" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 25 Q 100 5, 195 5 M 185 0 L 195 5 L 185 10" stroke="currentColor" stroke-width="3"
+              fill="transparent" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </h1>
+      <p class="text-gray-500 text-lg mb-8 mt-6">The easiest way to get your print as you want</p>
+      <a href="#"
+        class="inline-block bg-emerald-500 text-white font-medium px-8 py-3.5 rounded-full hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/30">Print
+        Your Own</a>
+    </div>
+
+    <div class="w-full md:w-1/2 relative z-10">
+      <div class="grid grid-cols-2 gap-4 max-w-md ml-auto">
+        <img src="public/uploads/1710321197815" alt="Yellow and Green T-Shirts"
+          class="w-full h-auto object-cover rounded shadow-sm">
+        <img src="https://placehold.co/300x300/e2e8f0/64748b?text=White+T-Shirts" alt="White T-Shirts"
+          class="w-full h-auto object-cover rounded shadow-sm">
+        <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Color+Palette" alt="Color Palette"
+          class="w-full h-auto object-cover rounded shadow-sm">
+        <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Model" alt="Model in Green Hoodie"
+          class="w-full h-auto object-cover rounded shadow-sm">
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- MAIN -->
-  <main class="container mx-auto px-4 py-8">
-    <!-- HERO -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-      <!-- Left: text -->
-      <div class="lg:col-span-2 bg-gray-100 p-8 rounded-md">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-          Men Black Full <br/> Sleeve<br/> Lightweight <br/> Shacket
-        </h1>
-        <p class="mt-6 max-w-prose text-gray-600">A clean, lightweight shacket made for city life.</p>
-        <div class="mt-6">
-          <a href="#" class="inline-flex items-center gap-3 bg-orange-500 text-white px-5 py-3 rounded-md shadow-sm">
-            SHOP NOW →
-          </a>
-        </div>
+  <section class="mt-20">
+    <h2 class="text-2xl font-bold mb-10 text-gray-900">Shopping by Categories</h2>
 
-        <!-- hero dots (small) -->
-        <div class="mt-6 flex gap-2 items-center">
-          <span class="w-2 h-2 bg-gray-800 rounded-full"></span>
-          <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
-          <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+    <div class="flex overflow-x-auto md:grid md:grid-cols-5 gap-4 md:gap-8 pb-4 hide-scrollbar">
+
+      <div class="flex flex-col items-center text-center min-w-[140px]">
+        <div class="w-16 h-16 mb-4 text-emerald-500 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20.38 3.46L16 2a8.96 8.96 0 0 0-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+          </svg>
         </div>
+        <h3 class="font-bold text-gray-900 mb-2">T-Shirt</h3>
+        <p class="text-xs text-gray-400">Molestias veniam ab eligen di aperiam officiis ad culpa sed</p>
       </div>
 
-      <!-- Right: image + side promos -->
-      <div class="space-y-4">
-        <div class="bg-white p-4 rounded-md">
-          <!-- ⭐⭐ ADD YOUR HERO IMAGE HERE ⭐⭐ -->
-          <img 
-            src="../disgn-img/user/1725371408_5666055.png" 
-            alt="Black Shacket"
-            class="mt-2 w-full h-44 max-w-md rounded-lg object-cover"
-          />
-          <!-- ⭐⭐ END HERO IMAGE ⭐⭐ -->
-          <!-- small price badge -->
-          <div class="absolute translate-y-[-2.8rem] translate-x-[-1rem]">
-            <div class="bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-semibold">$299</div>
-          </div>
+      <div class="flex flex-col items-center text-center min-w-[140px]">
+        <div class="w-16 h-16 mb-4 text-emerald-500 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 6h16v3H4V6zm0 12v-7h16v7H4z" />
+          </svg>
         </div>
-
-        <div class="grid grid-cols-1 gap-3">
-          <div class="bg-black text-white p-4 rounded-md flex items-center justify-between">
-            <div>
-              <div class="text-xs text-yellow-300">SUMMER SALES</div>
-              <div class="font-semibold">New Bomber Jackets...</div>
-            </div>
-            <a href="#" class="bg-orange-500 px-3 py-2 rounded-md">SHOP NOW</a>
-          </div>
-
-          <div class="bg-gray-100 p-6 rounded-md text-center">
-            <!-- ⭐ IMAGE: sunglasses promo ⭐ -->
-            <img src="/images/promo/sunglasses.png" alt="Coming Soon" class="mx-auto w-24 h-16 object-contain" />
-            <div class="mt-3 font-semibold">Coming Soon...</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES row -->
-    <section class="mt-8">
-      <div class="bg-white border rounded-md p-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
-          <div class="flex items-start gap-3">
-            <!-- ⭐ ICON placeholder: delivery ⭐ -->
-            📦
-            <div>
-              <div class="font-semibold">FASTED DELIVERY</div>
-              <div class="text-gray-500 text-xs">Delivery in 24/H</div>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            🏆
-            <div>
-              <div class="font-semibold">24 HOURS RETURN</div>
-              <div class="text-gray-500 text-xs">100% money-back guarantee</div>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            🔒
-            <div>
-              <div class="font-semibold">SECURE PAYMENT</div>
-              <div class="text-gray-500 text-xs">Your money is safe</div>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            🎧
-            <div>
-              <div class="font-semibold">SUPPORT 24/7</div>
-              <div class="text-gray-500 text-xs">Live contact/message</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CATEGORIES row -->
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold mb-4 text-center">Shop with Categories</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-        <!-- repeat category cards -->
-        <article class="bg-white border rounded-md p-3 text-center">
-          <!-- ⭐ IMAGE: cat bomber ⭐ -->
-          <img src="../disgn-img/user/1725371408_5666055.png" alt="Bomber jackets" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Bomber jackets</div>
-        </article>
-
-        <article class="bg-white border rounded-md p-3 text-center">
-          <img src="/images/categories/denim.jpg" alt="Denim" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Denim jackets</div>
-        </article>
-
-        <article class="bg-white border rounded-md p-3 text-center">
-          <img src="/images/categories/racer.jpg" alt="Racer" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Racer jackets</div>
-        </article>
-
-        <article class="bg-white border rounded-md p-3 text-center">
-          <img src="/images/categories/varsity.jpg" alt="Varsity" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Varsity jackets</div>
-        </article>
-
-        <article class="bg-white border rounded-md p-3 text-center">
-          <img src="/images/categories/leather.jpg" alt="Leather" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Leather jackets</div>
-        </article>
-
-        <article class="bg-white border rounded-md p-3 text-center">
-          <img src="/images/categories/puffer.jpg" alt="Puffer" class="w-full h-28 object-cover rounded" />
-          <div class="mt-2 text-sm">Puffer jackets</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- BEST DEALS grid -->
-    <section class="mt-12">
-      <div class="flex items-center justify-between">
-        <h3 class="text-lg font-semibold">Best Deals</h3>
-        <a href="#" class="text-blue-500 text-sm">Browse All Product →</a>
+        <h3 class="font-bold text-gray-900 mb-2">Long-Sleeves</h3>
+        <p class="text-xs text-gray-400">Molestias veniam ab eligen di aperiam officiis ad culpa sed</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-        <!-- PRIMARY BIG DEAL -->
-        <article class="bg-white border rounded-md p-4">
-          <!-- ⭐ IMAGE: big product (deal) ⭐ -->
-          <img src="/images/products/deal-big.jpg" alt="Raceer Jacket" class="w-full h-64 object-cover rounded" />
-          <div class="mt-3">
-            <div class="text-sm text-yellow-500 font-semibold">32% OFF</div>
-            <h4 class="font-semibold mt-2">Raceer Jackets 2025 edition</h4>
-            <div class="mt-2 text-gray-500 line-through text-sm">$665.99</div>
-            <div class="mt-1 text-blue-600 font-bold">$442.12</div>
-            <div class="mt-4 flex items-center gap-3">
-              <button class="bg-orange-500 text-white px-4 py-2 rounded">ADD TO CART</button>
-              <button class="border px-4 py-2 rounded">♡</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- COLUMN of small cards -->
-        <div class="space-y-4">
-          <article class="bg-white border rounded-md p-3 flex gap-3">
-            <img src="/images/products/thumb-1.jpg" alt="Plaid Jacket" class="w-20 h-20 object-cover rounded" />
-            <div>
-              <div class="text-sm font-medium">Plaid Light Emerald</div>
-              <div class="text-blue-600">$1699</div>
-            </div>
-          </article>
-
-          <article class="bg-white border rounded-md p-3 flex gap-3">
-            <img src="/images/products/thumb-2.jpg" alt="TSS Olive" class="w-20 h-20 object-cover rounded" />
-            <div>
-              <div class="text-sm font-medium">TSS Olive Fit</div>
-              <div class="text-blue-600">$299</div>
-            </div>
-          </article>
-
-          <article class="bg-white border rounded-md p-3">
-            <img src="/images/products/thumb-coat.jpg" alt="Black Coat" class="w-full h-40 object-cover rounded" />
-          </article>
+      <div class="flex flex-col items-center text-center min-w-[140px]">
+        <div class="w-16 h-16 mb-4 text-emerald-500 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M16 3h-8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+          </svg>
         </div>
+        <h3 class="font-bold text-gray-900 mb-2">Tanktop</h3>
+        <p class="text-xs text-gray-400">Molestias veniam ab eligen di aperiam officiis ad culpa sed</p>
+      </div>
 
-        <!-- RIGHT column small deals -->
-        <div class="space-y-4">
-          <article class="bg-white border rounded-md p-3">
-            <img src="/images/products/thumb-3.jpg" alt="Regular fit" class="w-full h-40 object-cover rounded" />
-            <div class="mt-2">Regular fit Jackets <div class="text-blue-600">$150</div></div>
-          </article>
+      <div class="flex flex-col items-center text-center min-w-[140px]">
+        <div class="w-16 h-16 mb-4 text-emerald-500 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Sweater</h3>
+        <p class="text-xs text-gray-400">Molestias veniam ab eligen di aperiam officiis ad culpa sed</p>
+      </div>
 
-          <article class="bg-white border rounded-md p-3">
-            <img src="/images/products/thumb-4.jpg" alt="Camera" class="w-full h-40 object-cover rounded" />
-            <div class="mt-2">Sony DSCHX9 <div class="text-blue-600">$1,200</div></div>
-          </article>
+      <div class="flex flex-col items-center text-center min-w-[140px]">
+        <div class="w-16 h-16 mb-4 text-emerald-500 flex items-center justify-center">
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10V7l-4-4H8L4 7v3M4 10v11h16V10M12 11v10M8 3v4M16 3v4" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Hoodies</h3>
+        <p class="text-xs text-gray-400">Molestias veniam ab eligen di aperiam officiis ad culpa sed</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div class="bg-[#f2ebf9] rounded-2xl p-8 flex flex-col sm:flex-row items-center overflow-hidden relative">
+      <div class="sm:w-1/2 z-10 mb-6 sm:mb-0">
+        <h3 class="text-3xl font-bold text-gray-900 mb-3 leading-tight">Thousands of<br>free templates</h3>
+        <p class="text-sm text-gray-500 mb-6">Free and easy way to bring<br>your ideas to life</p>
+        <a href="#"
+          class="inline-block bg-emerald-500 text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-emerald-600 transition-colors">Explore
+          More →</a>
+      </div>
+      <div class="sm:w-1/2 relative flex justify-end h-full min-h-[200px]">
+        <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Templates+Collage" alt="Templates"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 w-[120%] max-w-none object-cover rounded-xl shadow-md hidden sm:block">
+      </div>
+    </div>
+
+    <div class="bg-[#f0f4f2] rounded-2xl p-8 flex flex-col sm:flex-row items-center overflow-hidden relative">
+      <div class="sm:w-1/2 z-10 mb-6 sm:mb-0">
+        <h3 class="text-3xl font-bold text-gray-900 mb-3 leading-tight">Create your<br>unique style</h3>
+        <p class="text-sm text-gray-500 mb-6">Free and easy way to create<br>your ideas to life</p>
+        <a href="#"
+          class="inline-block bg-emerald-500 text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-emerald-600 transition-colors">Shop
+          Now →</a>
+      </div>
+      <div class="sm:w-1/2 relative flex justify-end">
+        <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Hanger+Shirt" alt="White Shirt on Hanger"
+          class="absolute -right-8 -bottom-8 w-64 object-cover transform rotate-12 hidden sm:block">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-2xl font-bold mb-8 text-gray-900">New Arrivals</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10">
+
+      <div class="group cursor-pointer">
+        <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-[3/4] relative">
+          <img src="https://placehold.co/400x533/e2e8f0/64748b?text=Model+1" alt="Zone Sweatshirt"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-gray-900 mb-1">Zone Sweatshirt</h3>
+          <p class="text-sm text-gray-900 font-medium">$19.95 - $159.95</p>
         </div>
       </div>
-    </section>
 
-    <!-- PROMO BANNER -->
-    <section class="mt-12 bg-amber-50 rounded-md p-6 lg:flex lg:items-center lg:justify-between">
-      <div>
-        <div class="text-xs text-blue-600 font-semibold">SAVE UP TO $200.00</div>
-        <h3 class="text-2xl font-bold mt-2">TSS Leather Jackets</h3>
-        <p class="mt-2 text-gray-600">WaterProof, double layered premium</p>
-        <div class="mt-4">
-          <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-md">SHOP NOW →</a>
+      <div class="group cursor-pointer">
+        <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-[3/4] relative">
+          <img src="https://placehold.co/400x533/e2e8f0/64748b?text=Model+2" alt="Zoo Men's t-shirt"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-gray-900 mb-1">Zoo Men's t-shirt</h3>
+          <p class="text-sm text-gray-900 font-medium">$14.95 - $119.95</p>
         </div>
       </div>
-      <div class="mt-6 lg:mt-0">
-        <!-- ⭐ IMAGE: promo model image ⭐ -->
-        <img src="/images/promo/promo-man.jpg" alt="Promo" class="w-full max-w-xs object-cover rounded" />
+
+      <div class="group cursor-pointer">
+        <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-[3/4] relative">
+          <span
+            class="absolute top-3 left-3 bg-[#ff9900] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase z-10">Hot</span>
+          <img src="https://placehold.co/400x533/e2e8f0/64748b?text=Toddler" alt="Toddler T-shirt"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-gray-900 mb-1">Toddler T-shirt</h3>
+          <p class="text-sm text-gray-900 font-medium">$26.00</p>
+        </div>
       </div>
-    </section>
 
-    <!-- NEWSLETTER -->
-    <section class="mt-12 bg-[color:var(--brand-blue)] text-white rounded p-8">
-      <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-xl font-bold">Subscribe to our newsletter</h3>
-        <p class="mt-2 text-sm text-white/80">Get updates and exclusive offers. No spam.</p>
-        <form class="mt-6 flex flex-col sm:flex-row items-center gap-3 justify-center">
-          <label for="email" class="sr-only">Email</label>
-          <input id="email" type="email" placeholder="Email address" class="w-full sm:flex-1 px-4 py-3 rounded text-gray-900" />
-          <button class="px-5 py-3 bg-orange-500 rounded text-white">SUBSCRIBE ➜</button>
-        </form>
+      <div class="group cursor-pointer">
+        <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-[3/4] relative">
+          <img src="https://placehold.co/400x533/e2e8f0/64748b?text=Model+4" alt="Fine Jersey Tee"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-gray-900 mb-1">Fine Jersey Tee</h3>
+          <p class="text-sm font-medium"><span class="text-emerald-500">$28.00</span> <span
+              class="text-gray-400 line-through ml-2">$34.00</span></p>
+        </div>
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-{{> user/footer }}
+  <section class="mt-20 bg-[#faf2f8] rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Sign up for<br>exclusive offers<br>from
+        us</h2>
+    </div>
+    <div class="md:w-1/2 w-full max-w-md ml-auto">
+      <p class="text-sm text-gray-600 mb-6">Sign up to your newsletter for all the latest news and our VIP exclusive
+        promotion.</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="Your email addr..."
+          class="flex-1 bg-white border-none rounded-full px-6 py-3 text-sm outline-none shadow-sm focus:ring-2 focus:ring-emerald-500">
+        <button
+          class="bg-black text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">Subscribe</button>
+      </div>
+    </div>
+  </section>
 
+  <section class="mt-20 border-t border-b border-gray-100 py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 text-emerald-500 mb-4">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 18c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3M3.22 12h17.56m-18.78-4h19m-19 8h19">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Worldwide Shipping</h4>
+        <p class="text-xs text-gray-500">Get free shipping over $65.</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 text-emerald-500 mb-4">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Returns</h4>
+        <p class="text-xs text-gray-500">Within 30 days for an exchange.</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 text-emerald-500 mb-4">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Online Support</h4>
+        <p class="text-xs text-gray-500">Top notch customer service.</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 text-emerald-500 mb-4">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Flexible Payment</h4>
+        <p class="text-xs text-gray-500">Pay with Multiple Credit Cards.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+{{>user/footer}}

@@ -37,5 +37,8 @@ router.get("/unblockCustomer", customerController.customerunBlocked);
 router.get("/categories", categoryController.categoryInfo);
 router.get("/addCategory", categoryController.addCategoryInfo);
 router.post("/addCategory", upload.single("image"), categoryController.addCategory);
+router.get("/editCategory", categoryController.editCategoryInfo);
+router.post("/editCategory", upload.single("image"), categoryController.editCategory);
+router.get("/deleteCategory", categoryController.deleteCategory);
 
 module.exports = router;

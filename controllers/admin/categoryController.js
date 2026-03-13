@@ -62,17 +62,77 @@ const addCategory = async (req, res) => {
             stock_quantity: 0
         })
         await newCategory.save();
+        res.redirect("/admin/categories");
         return res.status(200).json({ message: "Category added successfully" });
-        return res.redirect("/admin/categories");
-
     } catch (error) {
         console.error("Error adding category:", error);
         res.status(500).send("Server Error");
     }
 }
 
+const editCategoryInfo = async (req, res) => {
+    try {
+        const id = req.query.id;
+        const category = await Category.findById(id);
+        if (!category) {
+            return res.redirect("/admin/categories");
+        }
+        res.render("admin/editCategory", { category });
+    } catch (error) {
+        console.error("Error loading edit category page:", error);
+        res.status(500).send("Server Error");
+    }
+};
+
+const editCategory = async (req, res) => {
+    try {
+        const id = req.query.id;
+        const { category_name, description } = req.body;
+
+        const existingCategory = await Category.findOne({ category_name, _id: { $ne: id } });
+        if (existingCategory) {
+            return res.status(400).json({ error: "Category already exists" });
+        }
+
+        const category = await Category.findById(id);
+        if (!category) {
+            return res.status(404).json({ error: "Category not found" });
+        }
+
+        category.category_name = category_name;
+        category.description = description;
+
+        if (req.file) {
+            category.image = req.file.filename;
+        }
+
+        await category.save();
+        res.redirect("/admin/categories");
+    } catch (error) {
+        console.error("Error updating category:", error);
+        res.status(500).send("Server Error");
+    }
+};
+
+const deleteCategory = async (req, res) => {
+    try {
+        const id = req.query.id;
+        if (!id) {
+            return res.redirect("/admin/categories");
+        }
+        await Category.findByIdAndDelete(id);
+        res.redirect("/admin/categories");
+    } catch (error) {
+        console.error("Error deleting category:", error);
+        res.status(500).send("Server Error");
+    }
+};
+
 module.exports = {
     categoryInfo,
     addCategoryInfo,
-    addCategory
+    addCategory,
+    editCategoryInfo,
+    editCategory,
+    deleteCategory
 };

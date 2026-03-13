@@ -1,126 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Armor — Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeeSpace - Print Your Own</title>
   <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-    /* Minimal reset for consistent font rendering (still Tailwind-only for layout) */
-    :root { --brand-blue: #1f6b8a; --brand-orange: #f07f2e; --muted: #f6f6f6; }
-    html,body { height:100%; }
-        /* small helper to limit popup shadow spread on older browsers */
-    .popup-shadow { box-shadow: 0 10px 30px rgba(2,6,23,0.12); }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
   </style>
 </head>
-<body class="bg-white text-gray-800 antialiased">
 
-  <!-- TOP PROMO BAR -->
-  <div class="bg-gray-900 text-white">
-    <div class="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
-      <div class="flex items-center gap-3">
-        <span class="bg-yellow-300 text-gray-900 px-2 py-1 rounded-sm text-xs font-semibold">Black</span>
-        <span>Friday</span>
+<body class="text-gray-800 bg-white">
+
+  <div class="border-b border-gray-100 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center text-xs text-gray-500">
+      <div class="flex items-center space-x-2 cursor-pointer hover:text-gray-800">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+          </path>
+        </svg>
+        <span>Find a Store</span>
       </div>
-      <div class="hidden sm:flex items-center gap-4">
-        <span>Up to <span class="text-yellow-300 font-bold">59%</span> OFF</span>
-        <button class="bg-yellow-400 text-black px-4 py-1 text-sm rounded shadow">SHOP NOW ➜</button>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="hover:text-gray-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+          </svg></a>
+        <a href="#" class="hover:text-gray-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+          </svg></a>
+        <a href="#" class="hover:text-gray-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg></a>
+        <a href="#" class="hover:text-gray-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg></a>
       </div>
-      <button aria-hidden="true" class="sm:hidden text-sm">Close ✕</button>
     </div>
   </div>
 
-  <!-- HEADER / NAV -->
-  <header class="bg-[color:var(--brand-blue)] text-white">
-    <div class="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
-      <!-- Left: Logo -->
-      <a href="#" class="flex items-center gap-3">
-        <!-- REPLACE: Logo SVG / img -->
-        <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center">
-          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2"/></svg>
-        </div>
-        <span class="font-extrabold text-xl tracking-wide">ARMOR</span>
-      </a>
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+    <a href="#" class="flex items-center space-x-2">
+      <div class="w-8 h-8 bg-emerald-500 rounded flex items-center justify-center text-white font-bold text-xl">T</div>
+      <span class="text-xl font-bold tracking-tight">TeeSpace</span>
+    </a>
 
-      <!-- Middle: Search (hidden on xs) -->
-      <div class="hidden md:flex flex-1 justify-center px-6">
-        <div class="w-full max-w-2xl">
-          <label for="search" class="sr-only">Search</label>
-          <div class="relative">
-            <input id="search" type="search" placeholder="Search for anything..." class="w-full rounded-md px-4 py-3 text-gray-800 focus:outline-none" />
-            <button class="absolute right-2 top-1/2 -translate-y-1/2 p-2">
-              <svg class="h-5 w-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="6" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke-width="2"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: actions -->
-      <div class="flex items-center gap-4">
-        <div class="hidden sm:flex items-center text-sm gap-3">
-          <button class="flex items-center gap-2 px-3 py-2 bg-white/10 rounded">Follow us</button>
-        </div>
-
-         <div class="flex items-center gap-3">
-          <button id="cartBtn" aria-haspopup="true" aria-expanded="false" class="relative p-2 bg-white/10 rounded">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke-width="2"/></svg>
-            <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-1 rounded-full">2</span>
-          </button>
-          <button id="wishlistBtn" class="p-2 bg-white/10 rounded">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.8 6.6a5.5 5.5 0 00-7.78 0L12 7.6l-1.02-1a5.5 5.5 0 00-7.78 7.78L12 22l8.8-7.62a5.5 5.5 0 000-7.78z" stroke-width="1.2"/></svg>
-          </button>
-          <button id="userBtn" aria-haspopup="true" aria-expanded="false" class="p-2 bg-white/10 rounded">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 22c0-4 4-7 10-7s10 3 10 7" stroke-width="1.5"/></svg>
-
-
-          </button>
-
-          
-        </div>
-
-        <!-- Mobile menu toggle -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 ml-1 bg-white/10 rounded">
-          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg>
-        </button>
-      </div>
+    <div
+      class="hidden md:flex flex-1 max-w-lg items-center bg-white border border-gray-200 rounded-full pl-5 pr-1 py-1 shadow-sm">
+      <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input type="text" placeholder="What are you looking for?" class="flex-1 outline-none text-sm bg-transparent">
+      <button
+        class="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">Search</button>
     </div>
 
-    <!-- SECONDARY NAV: categories + small actions -->
-    <nav class="bg-white text-gray-700 border-t border-white/10">
-      <div class="container mx-auto px-4 py-3 flex items-center gap-4">
-        <button id="categoryBtn" class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded shadow-sm">
-          All Category
-          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor"><path d="M6 8l4 4 4-4" stroke-width="2"/></svg>
-        </button>
-
-        <div class="hidden sm:flex items-center gap-6 text-sm">
-          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14" stroke-width="2"/></svg> Track Order</a>
-          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v10" stroke-width="2"/></svg> Customer Support</a>
-          <a href="#" class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="2"/></svg> Need Help</a>
-        </div>
+    <div class="flex items-center space-x-4 md:space-x-6">
+      <div class="hidden sm:flex items-center space-x-2">
+        <a href="/login"
+          class="text-sm font-medium hover:text-emerald-500 px-4 py-2 rounded-full border border-gray-200">Log
+          In</a>
+        <a href="/signup" class="text-sm font-medium bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">Sign
+          Up</a>
       </div>
-    </nav>
 
-    <!-- LOGIN MODAL (hidden) -->
-  <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center">
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="relative popup-shadow bg-white rounded-md w-full max-w-md p-6 z-10">
-      <h3 class="text-lg font-semibold">Sign in to your account</h3>
-      <form class="mt-4 space-y-4">
-        <div>
-          <label class="block text-sm text-gray-600">Email Address</label>
-          <input type="email" class="w-full border rounded px-3 py-2 mt-1" />
-        </div>
-        <div>
-          <label class="block text-sm text-gray-600">Password</label>
-          <input type="password" class="w-full border rounded px-3 py-2 mt-1" />
-        </div>
-        <div class="flex items-center gap-3">
-          <!-- <a href="/login"  class="bg-orange-500 text-white px-4 py-2 rounded" >login an</a> -->
-          <button type="button" class="bg-orange-500 text-white px-4 py-2 rounded">LOGIN →</button>
-          <button id="closeLogin" type="button" class="border px-4 py-2 rounded">CANCEL</button>
-        </div>
-      </form>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-emerald-500 relative">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+            </path>
+          </svg>
+        </a>
+        <a href="#" class="text-emerald-500 relative">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span
+            class="absolute -top-1 -right-2 bg-emerald-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+        </a>
+      </div>
     </div>
-  </div>
   </header>

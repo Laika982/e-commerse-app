@@ -1,0 +1,181 @@
+{{>admin/header}}
+
+<main class="flex-1 flex flex-col h-full overflow-hidden w-full bg-pageBg">
+
+    <header
+        class="h-20 bg-white border-b border-gray-200 flex items-center justify-between px-4 sm:px-6 lg:px-10 shrink-0">
+        <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn"
+                class="lg:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brandBlue/50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-600 hidden sm:block">Category</h2>
+        </div>
+
+        <div class="flex items-center gap-4 sm:gap-6">
+            <div class="relative hidden md:block">
+                <input type="text" placeholder="Search..."
+                    class="w-64 pl-4 pr-10 py-2.5 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 text-sm shadow-sm placeholder-gray-400">
+                <svg class="absolute right-3.5 top-3 w-4 h-4 text-gray-500" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div
+                    class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-orange-200 overflow-hidden border border-gray-100 flex items-center justify-center shrink-0">
+                    <img src="https://i.pravatar.cc/150?img=68" alt="Profile" class="w-full h-full object-cover">
+                </div>
+
+                <div
+                    class="relative w-9 h-9 sm:w-10 sm:h-10 bg-lightBlue rounded-full flex items-center justify-center cursor-pointer shrink-0">
+                    <svg class="w-5 h-5 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                        </path>
+                    </svg>
+                    <span
+                        class="absolute -top-1 -right-1 bg-blue-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white">21</span>
+                </div>
+
+                <div
+                    class="relative w-9 h-9 sm:w-10 sm:h-10 bg-lightBlue rounded-full flex items-center justify-center cursor-pointer shrink-0">
+                    <svg class="w-5 h-5 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                        </path>
+                    </svg>
+                    <span
+                        class="absolute -top-1 -right-1 bg-blue-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border-2 border-white">53</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form action="/admin/editCategory?id={{category._id}}" method="POST" enctype="multipart/form-data"
+        class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 pageBg">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-1">Edit Category</h2>
+                <div class="text-sm font-medium">
+                    <a href="#" class="text-brandBlue hover:underline">Dashboard</a>
+                    <span class="text-gray-400 mx-1">&gt;</span>
+                    <a href="/admin/categories" class="text-brandBlue hover:underline">Categories</a>
+                    <span class="text-gray-400 mx-1">&gt;</span>
+                    <span class="text-gray-600">Edit Category</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="/admin/categories">
+                    <button type="button"
+                        class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-none">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                        Cancel
+                    </button></a>
+                <button
+                    class="bg-brandBlue hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-none"
+                    type="submit">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    Update Category
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <div class="lg:col-span-1">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm h-full">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Thumbnail</h3>
+                    <label class="block text-sm font-semibold text-gray-600 mb-2">Photo</label>
+
+                    <input type="file" id="imageInput" class="hidden" accept="image/*" name="image">
+
+                    {{#if category.image}}
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-500 mb-2">Current Image:</p>
+                        <img src="/uploads/{{category.image}}" alt="Current Category Image"
+                            class="w-32 h-32 object-cover rounded-md border border-gray-200">
+                    </div>
+                    {{/if}}
+
+                    <div id="dropZoneContainer"
+                        class="border-2 border-dashed border-gray-200 rounded-xl bg-gray-50 flex flex-col items-center justify-center p-8 h-32 hover:bg-gray-100 transition-colors cursor-pointer group">
+                        <div class="w-8 h-8 mb-2 text-brandBlue">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p id="uploadText" class="text-xs text-gray-500 text-center mb-2">
+                            Drag and drop image here,<br>or click to change image
+                        </p>
+                        <button type="button"
+                            class="bg-blue-50 text-brandBlue px-3 py-1.5 rounded-lg text-xs font-semibold group-hover:bg-blue-100 transition-colors">
+                            Change Image
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm h-full">
+                    <h3 class="text-lg font-bold text-gray-800 mb-6">General Information</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label for="categoryName" class="block text-sm font-semibold text-gray-600 mb-2">Category
+                                Name</label>
+                            <input type="text" id="categoryName" placeholder="Type category name here. . ."
+                                name="category_name" value="{{category.category_name}}"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brandBlue/50 focus:border-brandBlue transition-colors text-sm placeholder-gray-400">
+                        </div>
+
+                        <div>
+                            <label for="categoryDescription"
+                                class="block text-sm font-semibold text-gray-600 mb-2">Description</label>
+                            <textarea id="categoryDescription" rows="8"
+                                placeholder="Type category description here. . ." name="description"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brandBlue/50 focus:border-brandBlue transition-colors text-sm placeholder-gray-400 resize-none">{{category.description}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+    {{>admin/footer}}
+
+    <script>
+        const dropZoneContainer = document.getElementById('dropZoneContainer');
+        const imageInput = document.getElementById('imageInput');
+        const uploadText = document.getElementById('uploadText');
+
+        // Trigger file input when clicking the drop zone
+        dropZoneContainer.addEventListener('click', () => {
+            imageInput.click();
+        });
+
+        // Handle file selection
+        imageInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                uploadText.innerHTML = `<span class="text-brandBlue font-medium">${fileName}</span> selected.<br>Click to change.`;
+            }
+        });
+    </script>

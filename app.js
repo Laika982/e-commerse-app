@@ -34,12 +34,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Middleware to prevent browser caching of authenticated pages
-// app.use((req, res, next) => {
-//     res.set("Cache-Control", "no-store, no-cache, must-revalidate, private");
-//     res.set("Pragma", "no-cache");
-//     res.set("Expires", "-1");
-//     next();
-// });
+app.use((req, res, next) => {
+    res.set("Cache-Control", "no-store, no-cache, must-revalidate, private");
+    res.set("Pragma", "no-cache");
+    res.set("Expires", "-1");
+    next();
+});
 
 //set up viewengine
 app.set("view engine", "hbs");
